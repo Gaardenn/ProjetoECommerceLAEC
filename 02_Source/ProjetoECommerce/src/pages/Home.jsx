@@ -1,7 +1,10 @@
+import Footer from "../components/Footer"
+import "../styles/Home.css"
+
 export function Home() {
     return (
-        <div>
-            <p>MEU CACHORRO MOIADO</p>
+        <div className="page">
+            <Footer />
         </div>
     );
 }
