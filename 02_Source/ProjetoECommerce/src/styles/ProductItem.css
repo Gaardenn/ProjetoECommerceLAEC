@@ -31,6 +31,10 @@
     margin-top: 1.5rem;
 }
 
+.item-data-status-soldout {
+    color: #E60012;
+}
+
 .item-data-extrainfo {
     display: flex;
     text-align: left;

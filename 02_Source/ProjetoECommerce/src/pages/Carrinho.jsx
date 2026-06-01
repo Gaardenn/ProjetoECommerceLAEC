@@ -2,9 +2,14 @@ import '../styles/Carrinho.css';
 import { ProductItem } from "../components/ProductItem";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from 'react';
+import { useCart } from '../hooks/useCart';
 
 export function Carrinho() {
+    const { cart, adicionarProduto, removerUnidade, removerItem } = useCart();
+
     const gow = {
+        id: 1,
         nome: "God of War Ragnarök",
         plataforma: "Playstation 4",
         dev: "Santa Monica Studios",
@@ -19,6 +24,7 @@ export function Carrinho() {
     }
 
     const h3 = {
+        id: 2,
         nome: "Halo 3",
         plataforma: "Xbox 360",
         dev: "Bungie Studios",
@@ -33,6 +39,7 @@ export function Carrinho() {
     }
 
     const smo = {
+        id: 3,
         nome: "Super Mario Odyssey",
         plataforma: "Nintendo Switch",
         dev: "Nintendo Entertrainment Planning & Development",
@@ -46,6 +53,13 @@ export function Carrinho() {
         imagem: "Super Mario Odyssey.png"
     }
 
+    useEffect(() => {
+        adicionarProduto(smo);
+        adicionarProduto(smo);
+        adicionarProduto(smo);
+        adicionarProduto(smo);
+    }, [])
+
     return (
         <div>
             <section className="body">
@@ -56,9 +70,9 @@ export function Carrinho() {
                             <h1 className="body-content-cart-header-text">Carrinho de compras</h1>
                         </div>
                         <hr />
-                        <ProductItem produto={gow} />
-                        <ProductItem produto={h3} />
-                        <ProductItem produto={smo} />
+                        {cart.map((p) => (
+                            <ProductItem key={p.id} produto={p} />
+                        ))}
                         <div className="body-content-footer">
                             <label for="selectAll" className="body-content-footer-title">Selecionar todos</label>
                             <input type="checkbox" id="selectAll" name="selectAll" />
