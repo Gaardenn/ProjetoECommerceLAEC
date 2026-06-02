@@ -1,9 +1,11 @@
 import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
 import "../styles/Informacoes.css"
 
 export function Informacoes() {
     return (
         <div>
+            <Navbar />
             <div className="page-body">
                 <h1 className="page-body-title">Informações</h1>
                 <h2 className="page-body-subtitle">Troca e Devoluções</h2>
