@@ -5,7 +5,7 @@ import { useCart } from "../hooks/useCart";
 
 export function ProductItem({ produto }) {
     const { imagem, nome, plataforma, dev, pub, status, midia, quantidade, preco } = produto;
-    const { removerUnidade, removerItem } = useCart();
+    const { adicionarProduto, removerUnidade, removerItem } = useCart();
 
     function ItemEsgotado() {
         return (
@@ -52,7 +52,7 @@ export function ProductItem({ produto }) {
                                     <FontAwesomeIcon icon={faTrash} className="item-data-quantity-button-trashicon" onClick={() => removerItem(produto)}/>
                                 </button>
                                 <p className="item-data-quantity-value">{quantidade}</p>
-                                <button className="item-data-quantity-button">+</button>
+                                <button className="item-data-quantity-button" onClick={() => adicionarProduto(produto)}>+</button>
                             </div>
                         </div>
                         <div className="item-useful">
@@ -81,7 +81,7 @@ export function ProductItem({ produto }) {
                             <div className="item-data-quantity">
                                 <button className="item-data-quantity-button" onClick={() => removerUnidade(produto)}>-</button>
                                 <p className="item-data-quantity-value">{quantidade}</p>
-                                <button className="item-data-quantity-button">+</button>
+                                <button className="item-data-quantity-button" onClick={() => adicionarProduto(produto)}>+</button>
                             </div>
                         </div>
                         <div className="item-useful">

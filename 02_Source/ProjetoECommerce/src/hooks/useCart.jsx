@@ -26,8 +26,7 @@ export function useCart() {
     }
 
     const removerUnidade = (produto) => {
-        let quantidadeFinal = produto.quantidade - 1;
-        setCart(cart.map((p) => p.id === produto.id ? { ...p, quantidade: quantidadeFinal } : p));
+        setCart(cart.map((p) => p.id === produto.id ? { ...p, quantidade: p.quantidade - 1 } : p));
     }
 
     const removerItem = (produto) => {

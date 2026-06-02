@@ -53,13 +53,6 @@ export function Carrinho() {
         imagem: "Super Mario Odyssey.png"
     }
 
-    useEffect(() => {
-        adicionarProduto(smo);
-        adicionarProduto(smo);
-        adicionarProduto(smo);
-        adicionarProduto(smo);
-    }, [])
-
     return (
         <div>
             <section className="body">
