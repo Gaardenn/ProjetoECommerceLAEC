@@ -1,0 +1,38 @@
+.product-price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price-headline {
+    padding-top: 18px;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 6px;
+    font-weight: bold;
+}
+
+.price-label {
+    font-size: 18px;
+}
+
+.price-value {
+    font-size: 64px;
+}
+
+.discount-info {
+    font-size: 18px;
+    color: #0000FF;
+    background-color: #ffffff;
+    padding: 0px 10px;
+}
+
+.installments-info {
+    text-align: right;
+    font-size: 14px;
+}
+
+.delivery-info {
+    
+}
