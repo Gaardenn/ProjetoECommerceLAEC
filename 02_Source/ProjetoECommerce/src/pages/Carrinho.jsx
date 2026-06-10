@@ -54,9 +54,8 @@ export function Carrinho() {
     }
 
     useEffect(() => {
-        console.log(localStorage.getItem("carrinho"));
-    }, [cart])
-
+    }, []);
+    
     return (
         <div>
             <section className="body">
@@ -68,7 +67,7 @@ export function Carrinho() {
                         </div>
                         <hr />
                         {cart.map((p) => (
-                            <ProductItem key={p.id} produto={p} />
+                            <ProductItem key={p.id} produto={p} adicionarProduto={adicionarProduto} removerUnidade={removerUnidade} removerItem={removerItem}  />
                         ))}
                         <div className="body-content-footer">
                             <label for="selectAll" className="body-content-footer-title">Selecionar todos</label>

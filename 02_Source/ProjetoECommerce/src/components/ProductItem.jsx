@@ -1,11 +1,9 @@
 import "../styles/ProductItem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { useCart } from "../hooks/useCart";
 
-export function ProductItem({ produto }) {
+export function ProductItem({ produto, adicionarProduto, removerUnidade, removerItem }) {
     const { imagem, nome, plataforma, dev, pub, status, midia, quantidade, preco } = produto;
-    const { adicionarProduto, removerUnidade, removerItem } = useCart();
 
     function ItemEsgotado() {
         return (
@@ -24,7 +22,7 @@ export function ProductItem({ produto }) {
                     </div>
                     <div className="item-useful">
                         <p className="item-useful-currency">R$ <span className="item-useful-value">{preco}</span></p>
-                        <button className="item-useful-remove" className="item-useful-button" onClick={() => removerItem(produto)}>Remover</button>
+                        <button className="item-useful-button" onClick={() => removerItem(produto)}>Remover</button>
                     </div>
                 </div>
                 <hr />
@@ -58,7 +56,7 @@ export function ProductItem({ produto }) {
                         <div className="item-useful">
                             <p className="item-useful-currency">R$ <span className="item-useful-value">{preco}</span></p>
                             <input type="checkbox" id="ativo" name="ativo" />
-                            <button className="item-useful-remove" className="item-useful-button" onClick={() => removerItem(produto)}>Remover</button>
+                            <button className="item-useful-button" onClick={() => removerItem(produto)}>Remover</button>
                         </div>
                     </div>
                     <hr />
@@ -87,7 +85,7 @@ export function ProductItem({ produto }) {
                         <div className="item-useful">
                             <p className="item-useful-currency">R$ <span className="item-useful-value">{preco}</span></p>
                             <input type="checkbox" id="ativo" name="ativo" />
-                            <button className="item-useful-remove" className="item-useful-button" onClick={() => removerItem(produto)}>Remover</button>
+                            <button className="item-useful-button" onClick={() => removerItem(produto)}>Remover</button>
                         </div>
                     </div>
                     <hr />
