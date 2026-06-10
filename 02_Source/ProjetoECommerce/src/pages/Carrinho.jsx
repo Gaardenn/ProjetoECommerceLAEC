@@ -53,6 +53,10 @@ export function Carrinho() {
         imagem: "Super Mario Odyssey.png"
     }
 
+    useEffect(() => {
+        console.log(localStorage.getItem("carrinho"));
+    }, [cart])
+
     return (
         <div>
             <section className="body">
