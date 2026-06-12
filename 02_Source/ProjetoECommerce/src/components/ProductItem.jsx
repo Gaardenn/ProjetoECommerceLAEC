@@ -1,32 +1,19 @@
 import "../styles/ProductItem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 export function ProductItem({ produto, adicionarProduto, removerUnidade, removerItem }) {
-    const { imagem, nome, plataforma, dev, pub, status, midia, quantidade, preco } = produto;
+    const { imagem, nome, plataforma, dev, pub, status, midia, quantidade, marcado, preco } = produto;
 
-    function ItemEsgotado() {
+    function Checkbox({ label }) {
+        const [ checked, setChecked ] = useState(marcado);
+        
         return (
-            <>
-                <div className="item">
-                    <img src={`/${imagem}`} />
-                    <div className="item-data">
-                        <h2 className="item-data-title">{nome} - {plataforma}</h2>
-                        <p className="item-data-subtitle">Developer: {dev} / Publisher: {pub}</p>
-                        <p className="item-data-status">Status: <span className="item-data-status-soldout">{status}</span></p>
-                        <div className="item-data-extrainfo">
-                            <p className="item-data-extrainfo-text">Mídia: {midia}</p>
-                            <input type="checkbox" id="presente" name="presente" className="item-data-extrainfo-checkbox" />
-                            <label for="presente" className="item-data-extrainfo-text">Para presente</label>
-                        </div>
-                    </div>
-                    <div className="item-useful">
-                        <p className="item-useful-currency">R$ <span className="item-useful-value">{preco}</span></p>
-                        <button className="item-useful-button" onClick={() => removerItem(produto)}>Remover</button>
-                    </div>
-                </div>
-                <hr />
-            </>
+            <label>
+                <input type="checkbox" checked={checked} />
+                <span>{label}</span>
+            </label>
         )
     }
 
@@ -35,28 +22,25 @@ export function ProductItem({ produto, adicionarProduto, removerUnidade, remover
             return (
                 <>
                     <div className="item">
+                        <Checkbox label={""} />
                         <img src={`/${imagem}`} />
                         <div className="item-data">
                             <h2 className="item-data-title">{nome} - {plataforma}</h2>
                             <p className="item-data-subtitle">Developer: {dev} / Publisher: {pub}</p>
-                            <p className="item-data-status">Status: {status}</p>
+                            <p className="item-data-media">Mídia: <span className="item-data-media-bold">{midia}</span></p>
                             <div className="item-data-extrainfo">
-                                <p className="item-data-extrainfo-text">Mídia: {midia}</p>
+                                <div className="item-data-extrainfo-quantity">
+                                    <p className="item-data-extrainfo-quantity-remove-disabled">-</p>
+                                    <p className="item-data-extrainfo-quantity-value">{quantidade}</p>
+                                    <button className="item-data-extrainfo-quantity-add" onClick={() => adicionarProduto(produto)}>+</button>
+                                </div>
                                 <input type="checkbox" id="presente" name="presente" className="item-data-extrainfo-checkbox" />
                                 <label for="presente" className="item-data-extrainfo-text">Para presente</label>
-                            </div>
-                            <div className="item-data-quantity">
-                                <button className="item-data-quantity-button">
-                                    <FontAwesomeIcon icon={faTrash} className="item-data-quantity-button-trashicon" onClick={() => removerItem(produto)}/>
-                                </button>
-                                <p className="item-data-quantity-value">{quantidade}</p>
-                                <button className="item-data-quantity-button" onClick={() => adicionarProduto(produto)}>+</button>
                             </div>
                         </div>
                         <div className="item-useful">
                             <p className="item-useful-currency">R$ <span className="item-useful-value">{preco}</span></p>
-                            <input type="checkbox" id="ativo" name="ativo" />
-                            <button className="item-useful-button" onClick={() => removerItem(produto)}>Remover</button>
+                            <button className="item-useful-button" onClick={() => removerItem(produto)}><FontAwesomeIcon icon={faTrash} /></button>
                         </div>
                     </div>
                     <hr />
@@ -66,26 +50,25 @@ export function ProductItem({ produto, adicionarProduto, removerUnidade, remover
             return (
                 <>
                     <div className="item">
+                        <Checkbox label={""} className="item-checkbox" />
                         <img src={`/${imagem}`} />
                         <div className="item-data">
                             <h2 className="item-data-title">{nome} - {plataforma}</h2>
                             <p className="item-data-subtitle">Developer: {dev} / Publisher: {pub}</p>
-                            <p className="item-data-status">Status: {status}</p>
+                            <p className="item-data-media">Mídia: <span className="item-data-media-bold">{midia}</span></p>
                             <div className="item-data-extrainfo">
-                                <p className="item-data-extrainfo-text">Mídia: {midia}</p>
+                                <div className="item-data-extrainfo-quantity">
+                                    <button className="item-data-quantity-remove" onClick={() => removerUnidade(produto)}>-</button>
+                                    <p className="item-data-extrainfo-quantity-value">{quantidade}</p>
+                                    <button className="item-data-extrainfo-quantity-add" onClick={() => adicionarProduto(produto)}>+</button>
+                                </div>
                                 <input type="checkbox" id="presente" name="presente" className="item-data-extrainfo-checkbox" />
                                 <label for="presente" className="item-data-extrainfo-text">Para presente</label>
-                            </div>
-                            <div className="item-data-quantity">
-                                <button className="item-data-quantity-button" onClick={() => removerUnidade(produto)}>-</button>
-                                <p className="item-data-quantity-value">{quantidade}</p>
-                                <button className="item-data-quantity-button" onClick={() => adicionarProduto(produto)}>+</button>
                             </div>
                         </div>
                         <div className="item-useful">
                             <p className="item-useful-currency">R$ <span className="item-useful-value">{preco}</span></p>
-                            <input type="checkbox" id="ativo" name="ativo" />
-                            <button className="item-useful-button" onClick={() => removerItem(produto)}>Remover</button>
+                            <button className="item-useful-button" onClick={() => removerItem(produto)}><FontAwesomeIcon icon={faTrash} /></button>
                         </div>
                     </div>
                     <hr />
@@ -94,14 +77,7 @@ export function ProductItem({ produto, adicionarProduto, removerUnidade, remover
         }
     }
 
-
-    if (status === "Esgotado") {
-        return (
-            <ItemEsgotado />
-        )
-    } else {
-        return (
-            <ItemEmEstoque />
-        )
-    }
+    return (
+        <ItemEmEstoque />
+    )
 }

@@ -29,7 +29,7 @@ export function Carrinho() {
         plataforma: "Xbox 360",
         dev: "Bungie Studios",
         pub: "Microsoft Game Studios",
-        status: "Esgotado",
+        status: "Em estoque",
         midia: "Física",
         presente: false,
         quantidade: 0,
@@ -65,13 +65,13 @@ export function Carrinho() {
                             <FontAwesomeIcon icon={faCartShopping} className="body-content-cart-header-icon" />
                             <h1 className="body-content-cart-header-text">Carrinho de compras</h1>
                         </div>
-                        <hr />
+                        <hr className="body-content-cart-line"/>
                         {cart.map((p) => (
                             <ProductItem key={p.id} produto={p} adicionarProduto={adicionarProduto} removerUnidade={removerUnidade} removerItem={removerItem}  />
                         ))}
                         <div className="body-content-footer">
-                            <label for="selectAll" className="body-content-footer-title">Selecionar todos</label>
                             <input type="checkbox" id="selectAll" name="selectAll" />
+                            <label for="selectAll" className="body-content-footer-title">Selecionar todos</label>
                         </div>
                     </div>
                     <div>Total</div>
