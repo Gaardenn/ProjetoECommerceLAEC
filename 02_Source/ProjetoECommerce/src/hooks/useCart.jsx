@@ -33,5 +33,17 @@ export function useCart() {
         setCart(cart.filter(p => p.id !== produto.id));
     }
 
-    return { cart, adicionarProduto, removerUnidade, removerItem };
+    const marcar = (produto) => {
+        setCart(cart.map((p) => p.id === produto.id ? { ...p, marcado: !produto.marcado} : p));
+    }
+
+    const todosMarcados = () => {
+        let todos = true;
+
+        cart.map((p) => p.marcado === false ? todos = false : true);
+
+        return todos;
+    }
+
+    return { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados };
 }

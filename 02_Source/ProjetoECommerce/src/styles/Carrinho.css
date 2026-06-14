@@ -38,12 +38,24 @@
 .body-content-footer {
     display: flex;
     justify-content: start;
+}
+
+.body-content-footer-check {
+    display: flex;
     gap: 1.5rem;
     padding-left: 0.5rem;
     margin-top: 1.75rem;
 }
 
-.body-content-footer-title {
+.body-content-footer-checkbox {
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
+    background: rgba(.0, .0, .0, .0);
+    border: 3px #EDF2F4 solid;
+}
+
+.body-content-footer-check-title {
     text-decoration: underline;
     color: #EDF2F4;
     font-weight: 600;

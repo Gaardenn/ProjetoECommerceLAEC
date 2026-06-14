@@ -2,11 +2,12 @@ import '../styles/Carrinho.css';
 import { ProductItem } from "../components/ProductItem";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useCart } from '../hooks/useCart';
 
 export function Carrinho() {
-    const { cart, adicionarProduto, removerUnidade, removerItem } = useCart();
+    const { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados } = useCart();
+    const [todos, setTodos] = useState(() => todosMarcados());
 
     const gow = {
         id: 1,
@@ -54,7 +55,12 @@ export function Carrinho() {
     }
 
     useEffect(() => {
+        adicionarProduto(gow);
     }, []);
+
+    useEffect(() => {
+        setTodos(todosMarcados());
+    }, [cart]);
     
     return (
         <div>
@@ -67,11 +73,18 @@ export function Carrinho() {
                         </div>
                         <hr className="body-content-cart-line"/>
                         {cart.map((p) => (
-                            <ProductItem key={p.id} produto={p} adicionarProduto={adicionarProduto} removerUnidade={removerUnidade} removerItem={removerItem}  />
+                            <ProductItem key={p.id} produto={p} adicionarProduto={adicionarProduto} removerUnidade={removerUnidade}
+                                removerItem={removerItem} marcar={marcar} />
                         ))}
                         <div className="body-content-footer">
-                            <input type="checkbox" id="selectAll" name="selectAll" />
-                            <label for="selectAll" className="body-content-footer-title">Selecionar todos</label>
+                            <label className="body-content-footer-check">
+                                <input type="checkbox" onChange={() => setTodos(!todos)}/>
+                                <svg className="body-content-footer-checkbox" aria-hidden="true" viewBox="0 0 15 11" 
+                                    fill="none">
+                                    <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={todos ? "#fff" : "none"}/>
+                                </svg>
+                                <span className="body-content-footer-check-title">Selecionar Todos</span>
+                            </label>
                         </div>
                     </div>
                     <div>Total</div>

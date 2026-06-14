@@ -3,26 +3,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-export function ProductItem({ produto, adicionarProduto, removerUnidade, removerItem }) {
+export function ProductItem({ produto, adicionarProduto, removerUnidade, removerItem, marcar }) {
     const { imagem, nome, plataforma, dev, pub, status, midia, quantidade, marcado, preco } = produto;
-
-    function Checkbox({ label }) {
-        const [ checked, setChecked ] = useState(marcado);
-        
-        return (
-            <label>
-                <input type="checkbox" checked={checked} />
-                <span>{label}</span>
-            </label>
-        )
-    }
+    const [isChecked, setIsChecked] = useState(marcado);
 
     function ItemEmEstoque() {
         if (quantidade === 1) {
             return (
                 <>
                     <div className="item">
-                        <Checkbox label={""} />
+                        <label className="item-check">
+                            <input type="checkbox" onChange={() => marcar(produto) } />
+                            <svg className="item-checkbox" aria-hidden="true" viewBox="0 0 15 11" 
+                                fill="none">
+                                <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={marcado ? "#fff" : "none"} />
+                            </svg>
+                        </label>
                         <img src={`/${imagem}`} />
                         <div className="item-data">
                             <h2 className="item-data-title">{nome} - {plataforma}</h2>
@@ -50,7 +46,13 @@ export function ProductItem({ produto, adicionarProduto, removerUnidade, remover
             return (
                 <>
                     <div className="item">
-                        <Checkbox label={""} className="item-checkbox" />
+                        <label className="item-check">
+                            <input type="checkbox" onChange={() => { marcar(produto) }} />
+                            <svg className="item-checkbox" aria-hidden="true" viewBox="0 0 15 11" 
+                                fill="none">
+                                <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={marcado ? "#fff" : "none"} />
+                            </svg>
+                        </label>
                         <img src={`/${imagem}`} />
                         <div className="item-data">
                             <h2 className="item-data-title">{nome} - {plataforma}</h2>
