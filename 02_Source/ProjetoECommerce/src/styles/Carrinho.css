@@ -47,6 +47,10 @@
     margin-top: 1.75rem;
 }
 
+.body-content-footer-check:hover {
+    cursor: pointer;
+}
+
 .body-content-footer-checkbox {
     display: inline-block;
     height: 1.25rem;

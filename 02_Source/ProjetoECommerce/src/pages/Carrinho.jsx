@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { useCart } from '../hooks/useCart';
 
 export function Carrinho() {
-    const { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados } = useCart();
+    const { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear } = useCart();
     const [todos, setTodos] = useState(() => todosMarcados());
 
     const gow = {
@@ -55,7 +55,6 @@ export function Carrinho() {
     }
 
     useEffect(() => {
-        adicionarProduto(gow);
     }, []);
 
     useEffect(() => {
@@ -74,11 +73,11 @@ export function Carrinho() {
                         <hr className="body-content-cart-line"/>
                         {cart.map((p) => (
                             <ProductItem key={p.id} produto={p} adicionarProduto={adicionarProduto} removerUnidade={removerUnidade}
-                                removerItem={removerItem} marcar={marcar} />
+                                removerItem={removerItem} marcar={marcar} presentear={presentear} />
                         ))}
                         <div className="body-content-footer">
                             <label className="body-content-footer-check">
-                                <input type="checkbox" onChange={() => setTodos(!todos)}/>
+                                <input type="checkbox" onChange={() => { marcarTudo(!todos); setTodos(!todos) }}/>
                                 <svg className="body-content-footer-checkbox" aria-hidden="true" viewBox="0 0 15 11" 
                                     fill="none">
                                     <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={todos ? "#fff" : "none"}/>

@@ -3,9 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-export function ProductItem({ produto, adicionarProduto, removerUnidade, removerItem, marcar }) {
-    const { imagem, nome, plataforma, dev, pub, status, midia, quantidade, marcado, preco } = produto;
-    const [isChecked, setIsChecked] = useState(marcado);
+export function ProductItem({ produto, adicionarProduto, removerUnidade, removerItem, marcar, presentear }) {
+    const { imagem, nome, plataforma, dev, pub, status, midia, quantidade, marcado, preco, presente } = produto;
 
     function ItemEmEstoque() {
         if (quantidade === 1) {
@@ -13,8 +12,8 @@ export function ProductItem({ produto, adicionarProduto, removerUnidade, remover
                 <>
                     <div className="item">
                         <label className="item-check">
-                            <input type="checkbox" onChange={() => marcar(produto) } />
-                            <svg className="item-checkbox" aria-hidden="true" viewBox="0 0 15 11" 
+                            <input type="checkbox" onChange={() => marcar(produto)} />
+                            <svg className="item-checkbox" aria-hidden="true" viewBox="0 0 15 11"
                                 fill="none">
                                 <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={marcado ? "#fff" : "none"} />
                             </svg>
@@ -30,8 +29,14 @@ export function ProductItem({ produto, adicionarProduto, removerUnidade, remover
                                     <p className="item-data-extrainfo-quantity-value">{quantidade}</p>
                                     <button className="item-data-extrainfo-quantity-add" onClick={() => adicionarProduto(produto)}>+</button>
                                 </div>
-                                <input type="checkbox" id="presente" name="presente" className="item-data-extrainfo-checkbox" />
-                                <label for="presente" className="item-data-extrainfo-text">Para presente</label>
+                                <label className="item-data-extrainfo-check">
+                                    <input type="checkbox" onChange={() => presentear(produto)} />
+                                    <svg className="item-data-extrainfo-checkbox" aria-hidden="true" viewBox="0 0 15 11"
+                                        fill="none">
+                                        <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={presente ? "#fff" : "none"} />
+                                    </svg>
+                                    <span className="item-data-extrainfo-checkbox-text">Para presente</span>
+                                </label>
                             </div>
                         </div>
                         <div className="item-useful">
@@ -48,7 +53,7 @@ export function ProductItem({ produto, adicionarProduto, removerUnidade, remover
                     <div className="item">
                         <label className="item-check">
                             <input type="checkbox" onChange={() => { marcar(produto) }} />
-                            <svg className="item-checkbox" aria-hidden="true" viewBox="0 0 15 11" 
+                            <svg className="item-checkbox" aria-hidden="true" viewBox="0 0 15 11"
                                 fill="none">
                                 <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={marcado ? "#fff" : "none"} />
                             </svg>
@@ -64,8 +69,14 @@ export function ProductItem({ produto, adicionarProduto, removerUnidade, remover
                                     <p className="item-data-extrainfo-quantity-value">{quantidade}</p>
                                     <button className="item-data-extrainfo-quantity-add" onClick={() => adicionarProduto(produto)}>+</button>
                                 </div>
-                                <input type="checkbox" id="presente" name="presente" className="item-data-extrainfo-checkbox" />
-                                <label for="presente" className="item-data-extrainfo-text">Para presente</label>
+                                <label className="item-data-extrainfo-check">
+                                    <input type="checkbox" onChange={() => presentear(produto)} />
+                                    <svg className="item-data-extrainfo-checkbox" aria-hidden="true" viewBox="0 0 15 11"
+                                        fill="none">
+                                        <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={presente ? "#fff" : "none"} />
+                                    </svg>
+                                    <span className="item-data-extrainfo-checkbox-text">Para presente</span>
+                                </label>
                             </div>
                         </div>
                         <div className="item-useful">

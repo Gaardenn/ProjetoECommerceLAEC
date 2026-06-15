@@ -39,11 +39,19 @@ export function useCart() {
 
     const todosMarcados = () => {
         let todos = true;
-
+        
         cart.map((p) => p.marcado === false ? todos = false : true);
 
         return todos;
     }
 
-    return { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados };
+    const marcarTudo = (boolean) => {
+        cart.map((p) => p.marcado = boolean);
+    }
+
+    const presentear = (produto) => {
+        setCart(cart.map((p) => p.id === produto.id ? { ...p, presente: !produto.presente } : p));
+    }
+
+    return { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear };
 }
