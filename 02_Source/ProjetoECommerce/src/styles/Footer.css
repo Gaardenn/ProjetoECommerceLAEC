@@ -1,0 +1,125 @@
+.footer-upper-divider {
+    background-image: linear-gradient(to bottom, #350000, #420606);
+    height: 2.705rem;
+}
+
+.footer {
+    background-color: #5C0808;
+}
+
+.footer-body-info {
+    margin: 2.6% 15% 2.5%;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.footer-body-info-column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.75rem;
+    flex: 1 !important;
+}
+
+.footer-body-info-column-header {
+    color: #EDF2F4;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 91.5%;
+    letter-spacing: -4%;
+}
+
+.footer-body-info-column-text {
+    color: #EDF2F4;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: -4%;
+}
+.footer-body-info-column-text.medium {
+    font-weight: 500;
+}
+
+.footer-body-info-column-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.18rem;
+    margin: 0;
+}
+
+.footer-body-info-column-list-text {
+    color: #EDF2F4;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: -4%;
+}
+
+.footer-body-info-column-list-item {
+    display: flex;
+    gap: 1.125rem;
+    align-items: center;
+}
+
+.footer-body-info-column-list-item-icon {
+    color: #EDF2F4;
+    font-size: 2rem;
+}
+
+.footer-body-info-column-list-link {
+    color: #EDF2F4;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: -4%;
+}
+
+.footer-lower-divider {
+    background-color: #410505;
+    height: 0.5rem;
+}
+
+.footer-end {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-end-content {
+    width: 40%;
+    display: flex;
+    gap: 1.75rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.29%;
+    margin-bottom: 2.29%;
+}
+
+.footer-end-content-name {
+    color: #EDF2F4;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 100%;
+}
+
+.footer-end-content-dot {
+    color: #EDF2F4;
+    font-size: 1.5rem;
+    margin-top: 3%;
+}
+
+.footer-end-content-copyright {
+    color: #EDF2F4;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-top: 3%;
+}
+
+.footer-end-content-link {
+    text-decoration: none;
+    display: flex;
+    gap: 0.475rem;
+    align-items: center;
+}

@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #5c0808;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.navbar-logo-img {
+    width: 45px;
+    height: auto;
+}
+
+.navbar-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.navbar-name {
+    color: #ff3c38;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 1;
+    margin: 0;
+}
+
+.navbar-slogan {
+    color: #edf2f4;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1;
+    margin-top: 4px;
+    white-space: nowrap;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    background-color: #edf2f4;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 100%;
+    max-width: 700px;
+    min-width: 150px;
+    margin: 0 64px;
+}
+
+.navbar-search-icon {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #804343;
+}
+
+.navbar-search-input{
+    border: none;
+    align-items: center;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #804343;
+    caret-color: #804343;
+    margin-top: 2px;
+}
+
+.navbar-search-input::placeholder {
+    color: #804343;
+    opacity: 1;
+}
+
+.navbar-cart {
+    display: flex;
+    align-items: center;
+    background-color: #edf2f4;
+    border-radius: 20px;
+    padding: 5px 7px;
+    position: relative;
+}
+
+.navbar-cart:hover {
+    transform: scale(1.1);
+}
+
+.navbar-cart-icon {
+    font-size: 18px;
+    color: #5c0808;
+}
+
+.navbar-cart-counter {
+    position: absolute;
+    top: 4px; 
+    right: 4px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #edf2f4;
+    background-color: #ff3c38;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.navbar-login {
+    display: flex;
+    background-color: #edf2f4;
+    border-radius: 20px;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+
+.navbar-login:hover {
+    transform: scale(1.1);
+}
+
+.navbar-login-icon {
+    font-size: 20px;
+    color: #5c0808;
+}
+
+.navbar-login-text {
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #5c0808;
+    margin-bottom: 2px;
+}

@@ -1,7 +1,13 @@
+import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
+import "../styles/Home.css"
+
 export function Home() {
     return (
-        <div>
-            <p>MEU CACHORRO MOIADO</p>
+        <div className="page">
+            <Navbar />
+            <div>Body provisório</div>
+            <Footer />
         </div>
     );
 }
