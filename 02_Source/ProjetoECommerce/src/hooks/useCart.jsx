@@ -69,5 +69,14 @@ export function useCart() {
         return subtotal;
     }
 
-    return { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear, quantMarcados, calcularSubtotal };
+    const calcularDescontoTotal = () => {
+        let desconto = 0;
+
+        cart.map((p) => p.marcado === true ? desconto += p.desconto : desconto);
+
+        return desconto;
+    }
+
+    return { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear, quantMarcados, calcularSubtotal,
+        calcularDescontoTotal };
 }
