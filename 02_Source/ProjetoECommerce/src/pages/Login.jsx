@@ -14,7 +14,7 @@ export function Login() {
                     </div>
                 </Link>
             </div>
-            <main className='login-container'>
+            <div className='login-container'>
                 <h1 className="login-title">Fazer login</h1>
 
                 <form className="login-form">
@@ -42,7 +42,13 @@ export function Login() {
                         Criar conta
                     </Link>
                 </form>
-            </main>
+            </div>
+            <div className="login-footer">
+                <img src="/logofooter.svg" alt="CDist Logo" className="login-footer-logo-img"/>
+                <span className="login-footer-title">CDist</span>
+                <span className="login-footer-point">•</span>
+                <span>© 2026. Todos os direitos reservados.</span>
+            </div>
         </div>
     );
 }

@@ -15,7 +15,7 @@ export function Cadastro() {
                 </Link>
             </div>
 
-            <main className="cadastro-container">
+            <div className="cadastro-container">
                 <h1 className="cadastro-title">Novo cadastro</h1>
 
                 <form className="cadastro-form">
@@ -46,7 +46,7 @@ export function Cadastro() {
                         Fazer login
                     </Link>
                 </form>
-            </main>
+            </div>
         </div>
     );
 }
