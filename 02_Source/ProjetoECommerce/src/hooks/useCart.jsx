@@ -46,7 +46,7 @@ export function useCart() {
     }
 
     const marcarTudo = (boolean) => {
-        cart.map((p) => p.marcado !== boolean);
+        cart.map((p) => p.marcado = boolean);
     }
 
     const presentear = (produto) => {

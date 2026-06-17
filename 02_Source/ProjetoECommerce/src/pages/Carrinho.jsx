@@ -86,7 +86,7 @@ export function Carrinho() {
                         ))}
                         <div className="body-content-footer">
                             <label className="body-content-footer-check">
-                                <input type="checkbox" onChange={() => { marcarTudo(!todos); setTodos(!todos) }} />
+                                <input type="checkbox" onChange={() => { marcarTudo(!todos); setTodos(!todos); setSubtotal(calcularSubtotal()); setQuant(quantMarcados()); }} />
                                 <svg className="body-content-footer-checkbox" aria-hidden="true" viewBox="0 0 15 11"
                                     fill="none">
                                     <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={todos ? "#fff" : "none"} />
@@ -128,7 +128,7 @@ export function Carrinho() {
                                 <span className="body-content-total-value-price">{subtotal + 11.71 - 20 < 0 ? 0 : subtotal + 11.71 - 20}</span>
                             </p>
                         </div>
-                        <Link to="/" className="body-content-total-button">Comprar</Link>
+                        <Link to="/comprar" className="body-content-total-button">Comprar</Link>
                     </div>
                 </div>
             </section>
