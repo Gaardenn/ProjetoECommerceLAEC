@@ -1,3 +1,149 @@
-.page {
-    padding-top: 80px;
+.page-body {
+    background-color: #1C0000;
+}
+
+.page-body-classes {
+    padding: 4% 5% 6% 5%;
+}
+
+.page-body-classes-title {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 91.5%;
+    color: #EDF2F4;
+}
+
+.page-body-classes-cards {
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-body-classes-playstation {
+    background-color: #00007D;
+    width: 20%;
+    border-radius: 1.25rem;
+}
+
+.page-body-classes-playstation-gradient {
+    background-image: linear-gradient(to right, #00AAFF, #0000FF);
+    display: flex;
+    width: 94%;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10% 7% 0.2% 0%;
+}
+
+.page-body-classes-playstation-gradient-img {
+    width: 50%;
+    filter: sepia(100%) hue-rotate(190deg) saturate(1000%);
+}
+
+.page-body-classes-playstation-gradient-title {
+    font-weight: 500;
+    font-size: 1.625rem;
+    line-height: 91.5%;
+    letter-spacing: -4%;
+    color: #EDF2F4;
+    padding-bottom: 2rem;
+    margin-left: -1.75rem;
+}
+
+.page-body-classes-xbox {
+    background-color: #003D00;
+    width: 20%;
+    border-radius: 1.25rem;
+}
+
+.page-body-classes-xbox-gradient {
+    background-image: linear-gradient(to right, #02C400, #107C0F);
+    display: flex;
+    width: 94%;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4.25%;
+    padding-right: 6%;
+}
+
+.page-body-classes-xbox-gradient-img {
+    width: 41%;
+    filter: sepia(100%) hue-rotate(80deg) saturate(1000%);
+}
+
+.page-body-classes-xbox-gradient-title {
+    font-weight: 500;
+    font-size: 1.625rem;
+    line-height: 91.5%;
+    letter-spacing: -4%;
+    color: #EDF2F4;
+    padding-bottom: 1.25rem;
+    margin-left: -1.5rem;
+}
+
+.page-body-classes-nintendo {
+    background-color: #7F0002;
+    width: 20%;
+    border-radius: 1.25rem;
+}
+
+.page-body-classes-nintendo-gradient {
+    background-image: linear-gradient(to right, #FF2E31, #E60012);
+    display: flex;
+    width: 94%;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20% 7% 3% 3%;
+}
+
+.page-body-classes-nintendo-gradient-img {
+    width: 47%;
+    filter: sepia(100%) hue-rotate(300deg) saturate(500%);
+}
+
+.page-body-classes-nintendo-gradient-title {
+    font-weight: 500;
+    font-size: 1.625rem;
+    line-height: 91.5%;
+    letter-spacing: -4%;
+    color: #EDF2F4;
+    padding-bottom: 3rem;
+    margin-left: -1.5rem;
+}
+
+.page-body-classes-retro {
+    background-color: #924400;
+    width: 20%;
+    border-radius: 1.25rem;
+}
+
+.page-body-classes-retro-gradient {
+    background-image: linear-gradient(to right, #FF851B, #FF7700);
+    display: flex;
+    width: 94%;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20% 8% 0% 0%;
+}
+
+.page-body-classes-retro-gradient-img {
+    width: 67%;
+    filter: sepia(100%) hue-rotate(330deg) saturate(500%);
+}
+
+.page-body-classes-retro-gradient-title {
+    font-weight: 500;
+    font-size: 1.625rem;
+    line-height: 91.5%;
+    letter-spacing: -4%;
+    color: #EDF2F4;
+    padding-bottom: 3rem;
+    margin-left: -1.5rem;
 }
