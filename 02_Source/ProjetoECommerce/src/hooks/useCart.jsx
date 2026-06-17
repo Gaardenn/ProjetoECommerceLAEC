@@ -64,7 +64,7 @@ export function useCart() {
     const calcularSubtotal = () => {
         let subtotal = 0;
 
-        cart.map((p) => p.marcado === true ? subtotal += p.preco : subtotal);
+        cart.map((p) => p.marcado === true ? subtotal += p.preco * p.quantidade : subtotal);
 
         return subtotal;
     }
@@ -77,6 +77,28 @@ export function useCart() {
         return desconto;
     }
 
+    const calcularFreteTotal = () => {
+        let frete = 0;
+
+        const itensFisicos = cart.filter((p) => p.marcado === true && p.midia === "Física");
+
+        const totais = itensFisicos.reduce((acumulador, p) => {
+            return {
+                peso: acumulador.peso + p.peso,
+                volume: acumulador.volume + p.volume,
+                quant: acumulador.quant + p.quantidade
+            };
+        }, { peso: 0, volume: 0, quant: 0 });
+
+        const { peso, volume, quant } = totais;
+
+        if (itensFisicos.length !== 0) {
+            frete = 7.9 + (peso * 2.5) + (volume * 1.2) - ((quant - 1) * 0.5);
+        }
+
+        return Math.min(frete, 29.9);
+    }
+
     return { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear, quantMarcados, calcularSubtotal,
-        calcularDescontoTotal };
+        calcularDescontoTotal, calcularFreteTotal };
 }

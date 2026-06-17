@@ -10,13 +10,12 @@ import { Link } from 'react-router-dom';
 
 export function Carrinho() {
     const { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear, quantMarcados,
-        calcularSubtotal, calcularDescontoTotal } = useCart();
+        calcularSubtotal, calcularDescontoTotal, calcularFreteTotal } = useCart();
     const [todos, setTodos] = useState(() => todosMarcados());
     const [quant, setQuant] = useState(() => quantMarcados());
     const [subtotal, setSubtotal] = useState(() => calcularSubtotal());
     const [descontoTotal, setDescontoTotal] = useState(() => calcularDescontoTotal());
-
-    const zero = 0;
+    const [frete, setFrete] = useState(() => calcularFreteTotal());
 
     const gow = {
         id: 1,
@@ -31,7 +30,9 @@ export function Carrinho() {
         marcado: false,
         preco: 187.87,
         desconto: 0,
-        imagem: "Jogo 1.png"
+        imagem: "Jogo 1.png",
+        peso: 0.05,
+        volume: 1
     }
 
     const h3 = {
@@ -47,7 +48,9 @@ export function Carrinho() {
         marcado: false,
         preco: 49.99,
         desconto: 20,
-        imagem: "Halo 3.png"
+        imagem: "Halo 3.png",
+        peso: 0.06,
+        volume: 1
     }
 
     const smo = {
@@ -63,7 +66,9 @@ export function Carrinho() {
         marcado: true,
         preco: 349.99,
         desconto: 0,
-        imagem: "Super Mario Odyssey.png"
+        imagem: "Super Mario Odyssey.png",
+        peso: 0,
+        volume: 0
     }
 
     useEffect(() => {
@@ -74,6 +79,7 @@ export function Carrinho() {
         setQuant(quantMarcados());
         setSubtotal(calcularSubtotal());
         setDescontoTotal(calcularDescontoTotal());
+        setFrete(calcularFreteTotal());
     }, [cart]);
 
     return (
@@ -119,7 +125,7 @@ export function Carrinho() {
                             <p className="body-content-total-shipping-text">Frete</p>
                             <p className="body-content-total-shipping-currency">
                                 R$
-                                <span className="body-content-total-shipping-price">11,71</span>
+                                <span className="body-content-total-shipping-price">{frete.toFixed(2)}</span>
                             </p>
                         </div>
                         <div className="body-content-total-discount">
@@ -133,7 +139,7 @@ export function Carrinho() {
                             <p className="body-content-total-value-text">TOTAL</p>
                             <p className="body-content-total-value-currency">
                                 R$
-                                <span className="body-content-total-value-price">{subtotal + 11.71 - descontoTotal < 0 ? zero.toFixed(2) : (subtotal + 11.71 - descontoTotal).toFixed(2)}</span>
+                                <span className="body-content-total-value-price">{subtotal + frete - descontoTotal < 0 ? (0).toFixed(2) : (subtotal + frete - descontoTotal).toFixed(2)}</span>
                             </p>
                         </div>
                         <Link to="/comprar" className="body-content-total-button">Comprar</Link>
