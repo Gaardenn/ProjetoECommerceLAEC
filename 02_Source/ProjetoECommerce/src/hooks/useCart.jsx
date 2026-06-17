@@ -46,12 +46,28 @@ export function useCart() {
     }
 
     const marcarTudo = (boolean) => {
-        cart.map((p) => p.marcado = boolean);
+        cart.map((p) => p.marcado !== boolean);
     }
 
     const presentear = (produto) => {
         setCart(cart.map((p) => p.id === produto.id ? { ...p, presente: !produto.presente } : p));
     }
 
-    return { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear };
+    const quantMarcados = () => {
+        let quant = 0;
+
+        cart.map((p) => p.marcado === true ? quant++ : quant);
+
+        return quant;
+    }
+
+    const calcularSubtotal = () => {
+        let subtotal = 0;
+
+        cart.map((p) => p.marcado === true ? subtotal += p.preco : subtotal);
+
+        return subtotal;
+    }
+
+    return { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear, quantMarcados, calcularSubtotal };
 }
