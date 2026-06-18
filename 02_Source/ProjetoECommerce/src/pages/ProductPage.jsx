@@ -5,13 +5,15 @@ import '../styles/ProductPage.css';
 
 export function ProductPage() {
     return (
-        <div className="product-page-wrapper">
-            <main className="product-main-content">
-                <ProductDetails /> 
-            </main>
-            <aside className="product-sidebar">
-                <ProductPrice />
-            </aside>
+        <div className="product-page">
+            <div className="product-page-wrapper">
+                <main className="product-main-content">
+                    <ProductDetails />
+                </main>
+                <aside className="product-sidebar">
+                    <ProductPrice />
+                </aside>
+            </div>
         </div>
     );
 }
