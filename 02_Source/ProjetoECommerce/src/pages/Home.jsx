@@ -8,6 +8,13 @@ export function Home() {
         <div className="page">
             <Navbar />
             <div className="page-body">
+                <section className="page-body-hero">
+                    <div className="page-body-hero-info">
+                        <h1 className="page-body-hero-title">Mídias físicas e digitais de jogos novos e usados a <span className="page-body-hero-title-alt">um clique</span> de distância</h1>
+                        <a href="#catalogo" className="page-body-hero-button">Confira nosso catálogo</a>
+                    </div>
+                    <img src="CD.png" className="page-body-hero-image" />
+                </section>
                 <section className="page-body-classes">
                     <h2 className="page-body-classes-title">CATEGORIAS</h2>
                     <div className="page-body-classes-cards">
