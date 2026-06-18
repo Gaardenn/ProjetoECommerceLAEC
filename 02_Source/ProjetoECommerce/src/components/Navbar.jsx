@@ -28,7 +28,7 @@ export default function Navbar() {
                     <span className="navbar-cart-counter">2</span>
                 </Link>
 
-                <Link to="/login" className="navbar-login">
+                <Link to="/autenticacao" className="navbar-login">
                     <span className="navbar-login-icon"><FontAwesomeIcon icon={faUser} /></span>
                     <span className="navbar-login-text">Login</span>
                 </Link>

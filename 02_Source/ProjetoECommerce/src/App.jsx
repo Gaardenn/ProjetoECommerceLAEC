@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Carrinho } from './pages/Carrinho';
 import { Informacoes } from './pages/Informacoes';
+import { Autenticacao } from './pages/Autenticacao';
 
 export function App() {
   return (
@@ -11,6 +12,7 @@ export function App() {
         <Route path="/" element={<Home />} />
         <Route path="/carrinho" element={<Carrinho />} />
         <Route path="/informacoes" element={<Informacoes />} />
+        <Route path="/autenticacao" element={<Autenticacao />} />
       </Routes>
     </>
   )
