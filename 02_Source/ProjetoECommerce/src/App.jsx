@@ -3,8 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Carrinho } from './pages/Carrinho';
 import { Informacoes } from './pages/Informacoes';
-import { Login } from './pages/Login';
-import { Cadastro } from './pages/Cadastro';
+import { Autenticacao } from './pages/Autenticacao';
 
 export function App() {
   return (
@@ -13,8 +12,7 @@ export function App() {
         <Route path="/" element={<Home />} />
         <Route path="/carrinho" element={<Carrinho />} />
         <Route path="/informacoes" element={<Informacoes />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/autenticacao" element={<Autenticacao />} />
       </Routes>
     </>
   )

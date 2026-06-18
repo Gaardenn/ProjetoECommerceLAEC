@@ -38,7 +38,7 @@ export function Login() {
 
                     <p className="login-signup-text">Não possui cadastro?</p>
 
-                    <Link to="/cadastro" className="login-create-account-button">
+                    <Link to="/autenticacao" className="login-create-account-button">
                         Criar conta
                     </Link>
                 </form>
