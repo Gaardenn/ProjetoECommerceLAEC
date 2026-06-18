@@ -212,7 +212,7 @@
 
 .body-content-shipping {
     margin-top: 8%;
-    padding: 9% 2.9% 8% 8.7%;
+    padding: 9% 8.9% 8% 8.7%;
     background-color: #5C0808;
     border-radius: 0.825rem;
 }
@@ -222,5 +222,100 @@
     font-weight: bold;
     font-size: 1.625rem;
     line-height: 91.5%;
+    color: #EDF2F4;
+    text-align: left;
+}
+
+.body-content-shipping-form {
+    margin-top: 5.6%;
+}
+
+.body-content-shipping-form-input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.body-content-shipping-form-input-text {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 91.5%;
+    color: #EDF2F4;
+    margin-bottom: 2.5%;
+}
+
+.body-content-shipping-form-input-field {
+    width: 100%;
+    height: 2.5rem;
+    border: 2px solid #0000FF;
+    border-radius: 0.825rem;
+    background: #edf2f4;
+    padding: 0.625rem 0.75rem;
+    outline: none;
+    color: rgba(0, 0, 99.6, 0.78);
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 91.5%;
+}
+
+.body-content-shipping-form-city {
+    display: flex;
+    margin-top: 4%;
+    align-items: center;
+}
+
+.body-content-shipping-form-text {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 87%;
+    color: #EDF2F4;
+}
+
+.body-content-shipping-form-submit {
+    border: none;
+    padding: 0.5rem 0rem;
+    width: 100%;
+    margin-top: 7%;
+    border-radius: 1.625rem;
+    background-color: #EDF2F4;
+    color: #0000FF;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 87%;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4.53px 8.61px 0px rgba(0, 0, 0, 0.15);
+    margin-bottom: 7%;
+}
+
+.body-content-shipping-form-submit:hover {
+    background-color: #B0C6CF;
+    transform: translateY(-5px);
+}
+
+.body-content-shipping-value {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    align-items: center;
+}
+
+.body-content-shipping-value-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 87%;
+    color: #EDF2F4;
+}
+
+.body-content-shipping-value-money {
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 87%;
+    color: #EDF2F4;
+}
+
+.body-content-shipping-value-days {
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 87%;
     color: #EDF2F4;
 }

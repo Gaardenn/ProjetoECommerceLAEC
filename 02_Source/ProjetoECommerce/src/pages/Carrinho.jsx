@@ -1,7 +1,7 @@
 import '../styles/Carrinho.css';
 import { ProductItem } from "../components/ProductItem";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import { useCart } from '../hooks/useCart';
 import Navbar from '../components/Navbar';
@@ -149,24 +149,25 @@ export function Carrinho() {
                         </div>
                         <div className="body-content-shipping">
                             <h2 className="body-content-shipping-header">Calcular frete e entrega:</h2>
-                            <div>
-                                <label>Insira seu CEP</label>
-                                <input type="text" placeholder="00000-000" />
-                            </div>
-                            <div>
-                                <p>Sua cidade</p>
-                            </div>
-                            <Link to="/">
-                                <p>Calcular</p>
-                            </Link>
+                            <form className="body-content-shipping-form">
+                                <div className="body-content-shipping-form-input">
+                                    <label for="cep" className="body-content-shipping-form-input-text">Insira seu CEP</label>
+                                    <input type="text" id="cep" name="cep" placeholder="00000-000" className="body-content-shipping-form-input-field" />
+                                </div>
+                                <div className="body-content-shipping-form-city body-content-shipping-form-text">
+                                    <FontAwesomeIcon icon={faLocationDot} />
+                                    <p>Sua cidade</p>
+                                </div>
+                                <input type="submit" value="Calcular" className="body-content-shipping-form-submit" />
+                            </form>
                             <hr />
-                            <div>
-                                <p>Valor</p>
-                                <p>R$ 11,71</p>
+                            <div className="body-content-shipping-value">
+                                <p className="body-content-shipping-value-title">Valor</p>
+                                <p className="body-content-shipping-value-money">R$ 11,71</p>
                             </div>
-                            <div>
-                                <p>Tempo</p>
-                                <p>até 9 dias úteis</p>
+                            <div className="body-content-shipping-value">
+                                <p className="body-content-shipping-value-title">Tempo</p>
+                                <p className="body-content-shipping-value-days">até 9 dias úteis</p>
                             </div>
                         </div>
                     </div>
