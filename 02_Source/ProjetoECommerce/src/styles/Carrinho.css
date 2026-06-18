@@ -165,7 +165,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 3.125rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
 }
 
 .body-content-total-value-text {
@@ -173,6 +173,7 @@
     font-size: 2rem;
     line-height: 91.5%;
     color: #5C0808;
+    margin: 0;
 }
 
 .body-content-total-value-currency {
@@ -200,9 +201,26 @@
     object-fit: cover;
     transition: background-color 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4.53px 8.61px 0px rgba(0, 0, 0, 0.15);
 }
 
 .body-content-total-button:hover {
     transform: translateY(-5px);
     background-color: #00009e;
+}
+
+.body-content-shipping {
+    margin-top: 8%;
+    padding: 9% 2.9% 8% 8.7%;
+    background-color: #5C0808;
+    border-radius: 0.825rem;
+}
+
+.body-content-shipping-header {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.625rem;
+    line-height: 91.5%;
+    color: #EDF2F4;
 }

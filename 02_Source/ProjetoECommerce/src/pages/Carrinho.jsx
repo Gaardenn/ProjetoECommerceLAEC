@@ -99,8 +99,10 @@ export function Carrinho() {
                         ))}
                         <div className="body-content-footer">
                             <label className="body-content-footer-check">
-                                <input type="checkbox" onChange={() => { marcarTudo(!todos); setTodos(!todos); setSubtotal(calcularSubtotal());
-                                    setQuant(quantMarcados()); setDescontoTotal(calcularDescontoTotal()); setTotal(calcularTotal()); }} />
+                                <input type="checkbox" onChange={() => {
+                                    marcarTudo(!todos); setTodos(!todos); setSubtotal(calcularSubtotal());
+                                    setQuant(quantMarcados()); setDescontoTotal(calcularDescontoTotal()); setFrete(calcularFreteTotal()); setTotal(calcularTotal());
+                                }} />
                                 <svg className="body-content-footer-checkbox" aria-hidden="true" viewBox="0 0 15 11"
                                     fill="none">
                                     <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={todos ? "#fff" : "none"} />
@@ -109,40 +111,64 @@ export function Carrinho() {
                             </label>
                         </div>
                     </div>
-                    <div className="body-content-total">
-                        {quant > 1 ?
-                            <p className="body-content-total-quantity">({quant} produtos)</p> :
-                            <p className="body-content-total-quantity">({quant} produto)</p>
-                        }
-                        <div className="body-content-total-subtotal">
-                            <p className="body-content-total-subtotal-text">Subtotal</p>
-                            <p className="body-content-total-subtotal-currency">
-                                R$
-                                <span className="body-content-total-subtotal-price">{subtotal.toFixed(2)}</span>
-                            </p>
+                    <div>
+                        <div className="body-content-total">
+                            {quant > 1 ?
+                                <p className="body-content-total-quantity">({quant} produtos)</p> :
+                                <p className="body-content-total-quantity">({quant} produto)</p>
+                            }
+                            <div className="body-content-total-subtotal">
+                                <p className="body-content-total-subtotal-text">Subtotal</p>
+                                <p className="body-content-total-subtotal-currency">
+                                    R$
+                                    <span className="body-content-total-subtotal-price">{subtotal.toFixed(2)}</span>
+                                </p>
+                            </div>
+                            <div className="body-content-total-shipping">
+                                <p className="body-content-total-shipping-text">Frete</p>
+                                <p className="body-content-total-shipping-currency">
+                                    R$
+                                    <span className="body-content-total-shipping-price">{frete.toFixed(2)}</span>
+                                </p>
+                            </div>
+                            <div className="body-content-total-discount">
+                                <p className="body-content-total-discount-text">Desconto</p>
+                                <p className="body-content-total-discount-currency">
+                                    R$
+                                    <span className="body-content-total-discount-price">{descontoTotal.toFixed(2)}</span>
+                                </p>
+                            </div>
+                            <div className="body-content-total-value">
+                                <h2 className="body-content-total-value-text">TOTAL</h2>
+                                <p className="body-content-total-value-currency">
+                                    R$
+                                    <span className="body-content-total-value-price">{subtotal + frete - descontoTotal < 0 ? (0).toFixed(2) : (subtotal + frete - descontoTotal).toFixed(2)}</span>
+                                </p>
+                            </div>
+                            <Link to="/comprar" className="body-content-total-button">Comprar</Link>
                         </div>
-                        <div className="body-content-total-shipping">
-                            <p className="body-content-total-shipping-text">Frete</p>
-                            <p className="body-content-total-shipping-currency">
-                                R$
-                                <span className="body-content-total-shipping-price">{frete.toFixed(2)}</span>
-                            </p>
+                        <div className="body-content-shipping">
+                            <h2 className="body-content-shipping-header">Calcular frete e entrega:</h2>
+                            <div>
+                                <label>Insira seu CEP</label>
+                                <input type="text" placeholder="00000-000" />
+                            </div>
+                            <div>
+                                <p>Sua cidade</p>
+                            </div>
+                            <Link to="/">
+                                <p>Calcular</p>
+                            </Link>
+                            <hr />
+                            <div>
+                                <p>Valor</p>
+                                <p>R$ 11,71</p>
+                            </div>
+                            <div>
+                                <p>Tempo</p>
+                                <p>até 9 dias úteis</p>
+                            </div>
                         </div>
-                        <div className="body-content-total-discount">
-                            <p className="body-content-total-discount-text">Desconto</p>
-                            <p className="body-content-total-discount-currency">
-                                R$
-                                <span className="body-content-total-discount-price">{descontoTotal.toFixed(2)}</span>
-                            </p>
-                        </div>
-                        <div className="body-content-total-value">
-                            <p className="body-content-total-value-text">TOTAL</p>
-                            <p className="body-content-total-value-currency">
-                                R$
-                                <span className="body-content-total-value-price">{subtotal + frete - descontoTotal < 0 ? (0).toFixed(2) : (subtotal + frete - descontoTotal).toFixed(2)}</span>
-                            </p>
-                        </div>
-                        <Link to="/comprar" className="body-content-total-button">Comprar</Link>
                     </div>
                 </div>
             </section>

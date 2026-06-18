@@ -72,7 +72,7 @@ export function useCart() {
     const calcularDescontoTotal = () => {
         let desconto = 0;
 
-        cart.map((p) => p.marcado === true ? desconto += p.desconto : desconto);
+        cart.map((p) => p.marcado === true ? desconto += p.desconto * p.quantidade : desconto);
 
         return desconto;
     }
