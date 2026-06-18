@@ -13,7 +13,6 @@
 .page-body-hero-info {
     display: flex;
     flex-direction: column;
-
 }
 
 .page-body-hero-title {
@@ -24,16 +23,29 @@
     letter-spacing: -3%;
     color: #EDF2F4;
     text-align: left;
+    z-index: 2;
 }
 
 .page-body-hero-title-alt {
-    background-color: #FF3C38;
+    position: relative;
+    display: inline-block;
+    background-color: #EDF2F4;
     background-image: linear-gradient(to right, #FF3C38, #0000FF);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+}
+
+.page-body-hero-title-alt::before {
+    content: "";
+    position: absolute;
+    inset: 14px -8px;
+    background: #EDF2F4;
+    z-index: -1;
+    height: 3.5rem;
+    rotate: -3deg;
 }
 
 .page-body-hero-button {
