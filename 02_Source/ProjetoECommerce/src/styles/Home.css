@@ -1,5 +1,6 @@
 .page-body {
     background-color: #1C0000;
+    width: 100%;
 }
 
 .page-body-classes {
@@ -170,4 +171,34 @@
 
 .page-body-classes-retro-gradient:hover .page-body-classes-retro-gradient-title {
     transform: translateY(-5px);
+}
+
+.banner-img {
+    width: 100%;
+    display: block;
+}
+
+.page-body-banner {
+    position: relative;
+}
+
+.banner-button {
+    position: absolute;
+    left: 9%;
+    bottom: 18%;
+    font-size: 1.2vw;
+    border: none;
+    border-radius: 4vw;
+    background-color: #edf2f4;
+    color: #0101dd;
+    font-weight: 800;
+    padding: 1vw 3.4vw;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.banner-button:hover {
+    transform: translateY(-4px);
 }

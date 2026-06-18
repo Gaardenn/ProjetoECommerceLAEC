@@ -37,6 +37,10 @@ export function Home() {
                         </div>
                     </div>
                 </section>
+                <section className="page-body-banner">
+                    <img src="Banner.png" className="banner-img" />
+                <a href="#catalogo" className="banner-button">VER TITULOS EM PROMOÇÃO</a>
+                </section>
             </div>
             <Footer />
         </div>
