@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import "../styles/CardAcesso.css";
+import "../styles/Autenticacao.css";
 
-function CardAcesso() {
+function LoginForm({ onToggle }) {
     return (
         <div className='auth-container'>
             <h1 className="auth-title">Fazer login</h1>
@@ -28,12 +28,16 @@ function CardAcesso() {
 
                 <p className="auth-signup-text">Não possui cadastro?</p>
 
-                <Link to="/autenticacao" className="auth-create-account-button">
+                <button 
+                    type="button" 
+                    className="auth-create-account-button"
+                    onClick={onToggle}
+                >
                     Criar conta
-                </Link>
+                </button>
             </form>
         </div>
     );
 }
 
-export default CardAcesso;
+export default LoginForm;
