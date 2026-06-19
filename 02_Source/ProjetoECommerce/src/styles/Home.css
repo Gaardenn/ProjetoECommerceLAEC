@@ -1,6 +1,77 @@
 .page-body {
+    margin: 0 !important;
     background-color: #1C0000;
     width: 100%;
+}
+
+.page-body-hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.6% 4.8% 0% 6.9%;
+    background-image: linear-gradient(to right, #7F0002, #FF3C38);
+}
+
+.page-body-hero-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-body-hero-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 100%;
+    letter-spacing: -3%;
+    color: #EDF2F4;
+    text-align: left;
+    z-index: 2;
+}
+
+.page-body-hero-title-alt {
+    position: relative;
+    display: inline-block;
+    background-color: #EDF2F4;
+    background-image: linear-gradient(to right, #FF3C38, #0000FF);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.page-body-hero-title-alt::before {
+    content: "";
+    position: absolute;
+    inset: 14px -8px;
+    background: #EDF2F4;
+    z-index: -1;
+    height: 3.5rem;
+    rotate: -3deg;
+}
+
+.page-body-hero-button {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 91.5%;
+    letter-spacing: -4%;
+    color: #EDF2F4;
+    padding: 1.4% 2.3%;
+    background-image: linear-gradient(45deg, #0000FF, #000099);
+    border-radius: 1.75rem;
+    width: 37%;
+    margin-top: 4%;
+    box-shadow: 0px 4.53px 8.61px 0px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.page-body-hero-button:hover {
+    background-image: linear-gradient(45deg, #0000c9, #00005f);
+    transform: translateY(-5px);
+}
+
+.page-body-hero-image {
+    margin-bottom: -9.5%;
 }
 
 .page-body-classes {
