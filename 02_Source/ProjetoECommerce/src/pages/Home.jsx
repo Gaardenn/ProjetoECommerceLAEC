@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
-import "../styles/Home.css"
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import { GameCard } from "../components/GameCard";
+import "../styles/Home.css";
+import { useProducts } from "../hooks/useProducts";
 
-export function Home({quantTotal, cart}) {
+export function Home({quantTotal, cart, adicionarProduto}) {
+    const products = useProducts();
+
     return (
         <div className="page">
             <Navbar quantTotal={quantTotal} cart={cart}/>
@@ -42,6 +46,24 @@ export function Home({quantTotal, cart}) {
                                 <h3 className="page-body-classes-retro-gradient-title">Retro</h3>
                             </Link>
                         </div>
+                    </div>
+                </section>
+                <section className="page-body-destaques">
+                    <h2 className="page-body-destaques-title">PRODUTOS EM DESTAQUE</h2>
+                    <div className="page-body-destaques-container">
+                        <button className="destaques-arrow left">‹</button>
+                        
+                        <div className="page-body-destaques-carrossel">
+                            {products.map((p) => (
+                                <GameCard 
+                                    key={p.id} 
+                                    jogo={p} 
+                                    adicionarProduto={adicionarProduto(p)} 
+                                />
+                            ))}
+                        </div>
+
+                        <button className="destaques-arrow right">›</button>
                     </div>
                 </section>
                 <section className="page-body-banner">

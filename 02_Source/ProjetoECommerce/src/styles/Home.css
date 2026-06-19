@@ -59,7 +59,7 @@
     padding: 1.4% 2.3%;
     background-image: linear-gradient(45deg, #0000FF, #000099);
     border-radius: 1.75rem;
-    width: 37%;
+    width: 27vw;
     margin-top: 4%;
     box-shadow: 0px 4.53px 8.61px 0px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
@@ -242,6 +242,57 @@
 
 .page-body-classes-retro-gradient:hover .page-body-classes-retro-gradient-title {
     transform: translateY(-5px);
+}
+
+.page-body-destaques {
+    padding: 0% 5% 4% 5%;
+}
+
+.page-body-destaques-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #EDF2F4;
+    margin-bottom: 1rem;
+}
+
+.page-body-destaques-container {
+    background-color: #610404;
+    border-radius: 12px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.page-body-destaques-carrossel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+    scrollbar-width: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.page-body-destaques-carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.destaques-arrow {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.destaques-arrow:hover {
+    transform: scale(1.2);
 }
 
 .banner-img {

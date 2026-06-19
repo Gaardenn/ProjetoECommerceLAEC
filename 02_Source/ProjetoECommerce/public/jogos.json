@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "nome": "God of War Ragnarök",
+    "plataforma": "Playstation 4",
+    "dev": "Santa Monica Studios",
+    "pub": "Sony Interactive Entertainment",
+    "status": "Em estoque",
+    "midia": "Física",
+    "presente": false,
+    "quantidade": 1,
+    "marcado": false,
+    "preco": 187.87,
+    "desconto": 0,
+    "imagem": "god-of-war.svg",
+    "peso": 0.05,
+    "volume": 1,
+    "classificacao": "18",
+    "data": "09 de novembro de 2022",
+    "modo": "Single-Player",
+    "tags": [
+      "PS4",
+      "Ação",
+      "Aventura"
+    ],
+    "descricao": "God of War Ragnarök (2022) acompanha Kratos e Atreus em busca por respostas enquanto o Fimbulwinter devasta os nove reinos. Eles enfrentam deuses nórdicos, incluindo Thor e Odin, para impedir a batalha profetizada que pode trazer o fim do mundo, enquanto Atreus tenta entender seu papel como Loki."
+  },
+  {
+    "id": 2,
+    "nome": "Halo 3",
+    "plataforma": "Xbox 360",
+    "dev": "Bungie Studios",
+    "pub": "Microsoft Game Studios",
+    "status": "Em estoque",
+    "midia": "Física",
+    "presente": false,
+    "quantidade": 0,
+    "marcado": false,
+    "preco": 49.99,
+    "desconto": 20,
+    "imagem": "Halo 3.png",
+    "peso": 0.06,
+    "volume": 1,
+    "classificacao": "16",
+    "data": "25 de setembro de 2007",
+    "modo": "Single-Player, Multi-Player",
+    "tags": [
+      "Xbox 360",
+      "Tiro",
+      "Ficção Científica"
+    ],
+    "descricao": "Halo 3 conclui o arco da história original da franquia. O jogo segue o Master Chief em uma batalha épica para defender a humanidade, enfrentando as ameaças do Covenant e do Flood."
+  },
+  {
+    "id": 3,
+    "nome": "Super Mario Odyssey",
+    "plataforma": "Nintendo Switch",
+    "dev": "Nintendo Entertainment Planning & Development",
+    "pub": "Nintendo",
+    "status": "Em estoque",
+    "midia": "Digital",
+    "presente": true,
+    "quantidade": 1,
+    "marcado": true,
+    "preco": 349.99,
+    "desconto": 0,
+    "imagem": "Super Mario Odyssey.png",
+    "peso": 0,
+    "volume": 0,
+    "classificacao": "Livre",
+    "data": "27 de outubro de 2017",
+    "modo": "Single-Player, Multi-Player",
+    "tags": [
+      "Nintendo Switch",
+      "Plataforma",
+      "Aventura"
+    ],
+    "descricao": "Super Mario Odyssey acompanha Mario e seu novo aliado Cappy em uma aventura em 3D ao redor do mundo a bordo da nave Odyssey para resgatar a Princesa Peach de um casamento forçado com Bowser."
+  }
+]
