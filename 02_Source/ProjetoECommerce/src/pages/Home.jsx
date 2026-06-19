@@ -70,6 +70,23 @@ export function Home({quantTotal, cart, adicionarProduto}) {
                     <img src="Banner.png" className="banner-img" />
                 <a href="#catalogo" className="banner-button">VER TITULOS EM PROMOÇÃO</a>
                 </section>
+
+                <section id="catalogo" className="page-body-catalogo">
+                    <h2 className="page-body-catalogo-title">CATÁLOGO</h2>
+
+                    <div className="page-body-catalogo-container">
+                        <div className="page-body-catalogo-grid">
+                            {products.map((p) => (
+                                <GameCard
+                                    key={"catalog-" + p.id}
+                                    jogo={p}
+                                    adicionarProduto={adicionarProduto(p)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
             </div>
             <Footer />
         </div>

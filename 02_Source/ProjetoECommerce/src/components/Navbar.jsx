@@ -8,11 +8,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar({quantTotal, cart}) {
 
-    const [quant, setQuant] = useState(()=>{quantTotal()});
-
-    useEffect(()=>{
-        setQuant(quantTotal());
-    }, [cart]);
+    const quant = quantTotal();
 
     return (
         <nav className="navbar">

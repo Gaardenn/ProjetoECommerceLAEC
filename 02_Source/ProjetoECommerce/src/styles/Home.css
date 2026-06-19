@@ -324,3 +324,28 @@
 .banner-button:hover {
     transform: translateY(-4px);
 }
+
+.page-body-catalogo {
+    padding: 4% 5% 6% 5%;
+}
+
+.page-body-catalogo-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #EDF2F4;
+    margin-bottom: 1rem;
+}
+
+.page-body-catalogo-container {
+    background-color: #610404;
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.page-body-catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
