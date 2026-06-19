@@ -4,6 +4,10 @@
     margin: 1.75rem 3rem 3.5rem 0.5rem;
 }
 
+.item-imagem {
+    max-width: 10vw;
+}
+
 input[type="checkbox"] {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

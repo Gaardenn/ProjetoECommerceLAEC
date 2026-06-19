@@ -23,6 +23,10 @@ export function useCart() {
             
             return true;
         }
+    } 
+
+    const adicionarUnidade = (produto) => {
+        setCart(cart.map((p) => p.id === produto.id ? { ...p, quantidade: p.quantidade + 1 } : p));
     }
 
     const removerUnidade = (produto) => {
@@ -56,7 +60,7 @@ export function useCart() {
     const quantMarcados = () => {
         let quant = 0;
 
-        cart.map((p) => p.marcado === true ? quant++ : quant);
+        cart.map((p) => p.marcado === true ? quant=quant+p.quantidade : quant);
 
         return quant;
     }
@@ -107,6 +111,6 @@ export function useCart() {
         return Math.min(frete, 29.9);
     }
 
-    return { cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear, quantMarcados, quantTotal, calcularSubtotal,
+    return { cart, adicionarProduto, adicionarUnidade, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear, quantMarcados, quantTotal, calcularSubtotal,
         calcularDescontoTotal, calcularFreteTotal };
 }

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-export function ProductItem({ produto, adicionarProduto, removerUnidade, removerItem, marcar, presentear }) {
+export function ProductItem({ produto, adicionarUnidade, removerUnidade, removerItem, marcar, presentear }) {
     const { imagem, nome, plataforma, dev, pub, status, midia, quantidade, marcado, preco, presente } = produto;
 
     return (
@@ -16,7 +16,7 @@ export function ProductItem({ produto, adicionarProduto, removerUnidade, remover
                         <path d="M1 4.5L5 9L14 1" strokeWidth="2" stroke={marcado ? "#fff" : "none"} />
                     </svg>
                 </label>
-                <img src={`/${imagem}`} />
+                <img src={`/${imagem}`} className="item-imagem"/>
                 <div className="item-data">
                     <h2 className="item-data-title">{nome} - {plataforma}</h2>
                     <p className="item-data-subtitle">Developer: {dev} / Publisher: {pub}</p>
@@ -27,7 +27,7 @@ export function ProductItem({ produto, adicionarProduto, removerUnidade, remover
                                <p className="item-data-extrainfo-quantity-remove-disabled">-</p> :
                                <button className="item-data-quantity-remove" onClick={() => removerUnidade(produto)}>-</button>}
                             <p className="item-data-extrainfo-quantity-value">{quantidade}</p>
-                            <button className="item-data-extrainfo-quantity-add" onClick={() => adicionarProduto(produto)}>+</button>
+                            <button className="item-data-extrainfo-quantity-add" onClick={() => adicionarUnidade(produto)}>+</button>
                         </div>
                         <label className="item-data-extrainfo-check">
                             <input type="checkbox" onChange={() => presentear(produto)} />

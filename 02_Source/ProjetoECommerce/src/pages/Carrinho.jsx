@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
-export function Carrinho({cart, adicionarProduto, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear, quantMarcados, quantTotal, calcularSubtotal, calcularDescontoTotal, calcularFreteTotal}) {
+export function Carrinho({cart, adicionarUnidade, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear, quantMarcados, quantTotal, calcularSubtotal, calcularDescontoTotal, calcularFreteTotal}) {
     
     const [todos, setTodos] = useState(() => todosMarcados());
     const [quant, setQuant] = useState(() => quantMarcados());
@@ -93,7 +93,7 @@ export function Carrinho({cart, adicionarProduto, removerUnidade, removerItem, m
                         </div>
                         <hr className="body-content-cart-line" />
                         {cart.map((p) => (
-                            <ProductItem key={p.id} produto={p} adicionarProduto={adicionarProduto} removerUnidade={removerUnidade}
+                            <ProductItem key={p.id} produto={p} adicionarUnidade={adicionarUnidade} removerUnidade={removerUnidade}
                                 removerItem={removerItem} marcar={marcar} presentear={presentear} />
                         ))}
                         <div className="body-content-footer">
