@@ -5,7 +5,7 @@ import { GameCard } from "../components/GameCard";
 import "../styles/Home.css";
 import { useProducts } from "../hooks/useProducts";
 
-export function Home({quantTotal, cart, adicionarProduto}) {
+export function Home({quantTotal, cart}) {
     const products = useProducts();
 
     return (
@@ -58,7 +58,6 @@ export function Home({quantTotal, cart, adicionarProduto}) {
                                 <GameCard 
                                     key={p.id} 
                                     jogo={p} 
-                                    adicionarProduto={adicionarProduto(p)} 
                                 />
                             ))}
                         </div>
@@ -80,7 +79,6 @@ export function Home({quantTotal, cart, adicionarProduto}) {
                                 <GameCard
                                     key={"catalog-" + p.id}
                                     jogo={p}
-                                    adicionarProduto={adicionarProduto(p)}
                                 />
                             ))}
                         </div>

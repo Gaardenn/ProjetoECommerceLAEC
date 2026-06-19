@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from 'react';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useState } from 'react';
 
 export default function Navbar({quantTotal, cart}) {
+    const [quant, setQuant] = useState(() => quantTotal());
 
-    const quant = quantTotal();
+    useEffect(() => {
+        setQuant(quantTotal())
+    }, [cart]);
 
     return (
         <nav className="navbar">
