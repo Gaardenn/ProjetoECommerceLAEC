@@ -1,0 +1,321 @@
+.page {
+    padding-top: 80px;
+}
+
+.body {
+    background-color: #1C0000;
+    padding: 5% 7.5%;
+}
+
+.body-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+.body-content-cart {
+    background-color: #5C0808;
+    padding: 1.5rem 2rem 2rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.body-content-cart-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.body-content-cart-header-icon {
+    color: #EDF2F4;
+    font-size: 2rem;
+}
+
+.body-content-cart-header-text {
+    color: #EDF2F4;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 91.5%;
+}
+
+.body-content-footer {
+    display: flex;
+    justify-content: start;
+}
+
+.body-content-footer-check {
+    display: flex;
+    gap: 1.5rem;
+    padding-left: 0.5rem;
+    margin-top: 1.75rem;
+}
+
+.body-content-footer-check:hover {
+    cursor: pointer;
+}
+
+.body-content-footer-checkbox {
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
+    background: rgba(.0, .0, .0, .0);
+    border: 3px #EDF2F4 solid;
+}
+
+.body-content-footer-check-title {
+    text-decoration: underline;
+    color: #EDF2F4;
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 91.5%;
+}
+
+.body-content-total {
+    background-image: url("Comanda-background.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 1.25rem 1.25rem 1.875rem 1.25rem;
+    text-align: left;
+}
+
+.body-content-total-quantity {
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 91.5%;
+    color: #5C0808;
+}
+
+.body-content-total-subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.body-content-total-subtotal-text {
+    font-weight: bold;
+    font-size: 1.75rem;
+    line-height: 91.5%;
+    color: #5C0808;
+}
+
+.body-content-total-subtotal-currency {
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 91.5%;
+    color: #5C0808;
+}
+
+.body-content-total-subtotal-price {
+    font-size: 2.25rem;
+    margin-left: 0.25rem;
+}
+
+.body-content-total-shipping {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+}
+
+.body-content-total-shipping-text {
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 91.5%;
+    color: #5C0808;
+}
+
+.body-content-total-shipping-currency {
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 91.5%;
+    color: #5C0808;
+}
+
+.body-content-total-shipping-price {
+    font-size: 1.75rem;
+    margin-left: 0.375rem;
+}
+
+.body-content-total-discount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.body-content-total-discount-text {
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 91.5%;
+    color: #5C0808;
+}
+
+.body-content-total-discount-currency {
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 91.5%;
+    color: #5C0808;
+}
+
+.body-content-total-discount-price {
+    font-size: 1.75rem;
+    margin-left: 0.375rem;
+}
+
+.body-content-total-value {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.125rem;
+    margin-bottom: 3.5rem;
+}
+
+.body-content-total-value-text {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 91.5%;
+    color: #5C0808;
+    margin: 0;
+}
+
+.body-content-total-value-currency {
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 91.5%;
+    color: #5C0808;
+}
+
+.body-content-total-value-price {
+    font-size: 2.625rem;
+    margin-left: 0.325rem;
+}
+
+.body-content-total-button {
+    display: flex;
+    background-color: #0000FE;
+    border-radius: 1.875rem;
+    padding: 0.75rem 5.875rem;
+    color: #EDF2F4;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 2.25rem;
+    line-height: 91.5%;
+    object-fit: cover;
+    transition: background-color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4.53px 8.61px 0px rgba(0, 0, 0, 0.15);
+}
+
+.body-content-total-button:hover {
+    transform: translateY(-5px);
+    background-color: #00009e;
+}
+
+.body-content-shipping {
+    margin-top: 8%;
+    padding: 9% 8.9% 8% 8.7%;
+    background-color: #5C0808;
+    border-radius: 0.825rem;
+}
+
+.body-content-shipping-header {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.625rem;
+    line-height: 91.5%;
+    color: #EDF2F4;
+    text-align: left;
+}
+
+.body-content-shipping-form {
+    margin-top: 5.6%;
+}
+
+.body-content-shipping-form-input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.body-content-shipping-form-input-text {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 91.5%;
+    color: #EDF2F4;
+    margin-bottom: 2.5%;
+}
+
+.body-content-shipping-form-input-field {
+    width: 100%;
+    height: 2.5rem;
+    border: 2px solid #0000FF;
+    border-radius: 0.825rem;
+    background: #edf2f4;
+    padding: 0.625rem 0.75rem;
+    outline: none;
+    color: rgba(0, 0, 99.6, 0.78);
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 91.5%;
+}
+
+.body-content-shipping-form-city {
+    display: flex;
+    margin-top: 4%;
+    align-items: center;
+}
+
+.body-content-shipping-form-text {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 87%;
+    color: #EDF2F4;
+}
+
+.body-content-shipping-form-submit {
+    border: none;
+    padding: 0.5rem 0rem;
+    width: 100%;
+    margin-top: 7%;
+    border-radius: 1.625rem;
+    background-color: #EDF2F4;
+    color: #0000FF;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 87%;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4.53px 8.61px 0px rgba(0, 0, 0, 0.15);
+    margin-bottom: 7%;
+}
+
+.body-content-shipping-form-submit:hover {
+    background-color: #B0C6CF;
+    transform: translateY(-5px);
+}
+
+.body-content-shipping-value {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    align-items: center;
+}
+
+.body-content-shipping-value-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 87%;
+    color: #EDF2F4;
+}
+
+.body-content-shipping-value-money {
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 87%;
+    color: #EDF2F4;
+}
+
+.body-content-shipping-value-days {
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 87%;
+    color: #EDF2F4;
+}

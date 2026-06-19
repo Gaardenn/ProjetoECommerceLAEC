@@ -81,6 +81,10 @@
     justify-content: center;
 }
 
+.quantity p {
+    color: #afb2b3;
+}
+
 .quantity button {
     border: 0;
     background: transparent;

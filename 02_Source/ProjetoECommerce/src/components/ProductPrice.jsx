@@ -1,30 +1,37 @@
+import { useState } from 'react';
 import '../styles/ProductPrice.css';
 
-export function ProductPrice() {
+export function ProductPrice({produto, adicionarProduto}) {
+
+    const [quant, setQuant] = useState(1);
+    const { preco } = produto;
+
     return (
         <div className="product-price-container">
             <section className="purchase-card">
                 <div className="price-headline">
                     <div className="price-label">R$</div>
-                    <div className="price-value">187,87</div>
+                    <div className="price-value">{preco}</div>
                     <div className="discount-info">à vista</div>
                 </div>
-                <div className="installments-info">ou por R$ 18,79/mês <br /> em 12x</div>
+                <div className="installments-info">ou por R$ {(preco/10).toFixed(2)}/mês <br /> em 12x</div>
 
                 <div className="delivery-info">
                     <div className="delivery-row">
                         <span className="delivery-text">Quantidade:</span>
                         <div className="quantity">
-                            <button type="button">-</button>
-                            <span>1</span>
-                            <button type="button">+</button>
+                            {quant === 1 ?
+                                <p>-</p> :
+                                <button type="button" onClick={()=>setQuant(quant--)}>-</button>}
+                            <span>{quant}</span>
+                            <button type="button" onClick={()=>setQuant(quant++)}>+</button>
                         </div>
                     </div>
                     <div className="delivery-status">Chegará sábado</div>
                     <div className="stock-info">Estoque disponível</div>
                 </div>
 
-                <button className="add-to-cart-button">Adicionar ao carrinho</button>
+                <button className="add-to-cart-button" onClick={()=>adicionarProduto(produto, quant)}>Adicionar ao carrinho</button>
             </section>
 
             <section className="rating-card">
