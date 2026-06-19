@@ -3,10 +3,10 @@ import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import "../styles/Home.css"
 
-export function Home() {
+export function Home({quantTotal, cart}) {
     return (
         <div className="page">
-            <Navbar />
+            <Navbar quantTotal={quantTotal} cart={cart}/>
             <div className="page-body">
                 <section className="page-body-hero">
                     <div className="page-body-hero-info">
