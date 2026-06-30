@@ -11,7 +11,7 @@ export function GameCard({ jogo }) {
 
     return (
         <div className="game-card">
-            <Link to="/produto" className="link">
+            <Link to={`/produto/${jogo.id}`} className="link">
                 <div className={`game-card-header ${plataformaClass}`}>
                     {jogo.plataforma}
                 </div>
