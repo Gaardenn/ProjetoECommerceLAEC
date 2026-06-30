@@ -22,9 +22,9 @@ export function ProductPrice({produto, adicionarProduto}) {
                         <div className="quantity">
                             {quant === 1 ?
                                 <p>-</p> :
-                                <button type="button" onClick={()=>setQuant(quant--)}>-</button>}
+                                <button type="button" onClick={()=>setQuant(quant - 1)}>-</button>}
                             <span>{quant}</span>
-                            <button type="button" onClick={()=>setQuant(quant++)}>+</button>
+                            <button type="button" onClick={()=>setQuant(quant + 1)}>+</button>
                         </div>
                     </div>
                     <div className="delivery-status">Chegará sábado</div>

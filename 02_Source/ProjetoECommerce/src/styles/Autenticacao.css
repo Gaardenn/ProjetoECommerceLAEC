@@ -201,3 +201,9 @@
     font-size: 12px;
     margin: 0;
 }
+
+.auth-error {
+    color: #c81e1e;
+    font-size: 11px;
+    margin: 0;
+}

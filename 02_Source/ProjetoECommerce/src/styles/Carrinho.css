@@ -319,3 +319,36 @@
     line-height: 87%;
     color: #EDF2F4;
 }
+
+@media (max-width: 768px) {
+    .body {
+        padding: 8% 5%;
+    }
+
+    .body-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .body-content-cart {
+        padding: 1.25rem 1rem 1.5rem 1rem;
+    }
+
+    .body-content-cart-header-text {
+        font-size: 2rem;
+    }
+
+    .body-content-total-value-text {
+        font-size: 1.5rem;
+    }
+
+    .body-content-total-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+
+    .body-content-shipping {
+        padding: 8%;
+    }
+}

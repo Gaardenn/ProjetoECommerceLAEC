@@ -157,3 +157,42 @@
     margin-bottom: 2px;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px 16px;
+        gap: 10px;
+    }
+
+    .navbar-logo-img {
+        width: 36px;
+    }
+
+    .navbar-name {
+        font-size: 20px;
+    }
+
+    .navbar-slogan {
+        font-size: 11px;
+    }
+
+    .navbar-search {
+        order: 3;
+        width: 100%;
+        margin: 0;
+        max-width: none;
+    }
+
+    .navbar-actions {
+        gap: 10px;
+    }
+
+    .navbar-login-text {
+        display: none;
+    }
+
+    .navbar-login {
+        padding: 8px 10px;
+    }
+}
