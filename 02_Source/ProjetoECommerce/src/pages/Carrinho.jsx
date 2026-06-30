@@ -144,7 +144,7 @@ export function Carrinho({cart, adicionarUnidade, removerUnidade, removerItem, m
                                     <span className="body-content-total-value-price">{subtotal + frete - descontoTotal < 0 ? (0).toFixed(2) : (subtotal + frete - descontoTotal).toFixed(2)}</span>
                                 </p>
                             </div>
-                            <Link to="/comprar" className="body-content-total-button">Comprar</Link>
+                            <Link to="/Autenticacao" className="body-content-total-button">Comprar</Link>
                         </div>
                         <div className="body-content-shipping">
                             <h2 className="body-content-shipping-header">Calcular frete e entrega:</h2>
