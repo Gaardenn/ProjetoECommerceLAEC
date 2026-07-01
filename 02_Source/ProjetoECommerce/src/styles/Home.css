@@ -349,3 +349,85 @@
     justify-items: center;
 }
 
+@media (max-width: 768px) {
+    .page-body-hero {
+        flex-direction: column;
+        padding: 8% 6%;
+        text-align: center;
+    }
+
+    .page-body-hero-info {
+        align-items: center;
+    }
+
+    .page-body-hero-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .page-body-hero-title-alt::before {
+        display: none;
+    }
+
+    .page-body-hero-title-alt {
+        background: none;
+        -webkit-text-fill-color: #EDF2F4;
+        -moz-text-fill-color: #EDF2F4;
+        color: #EDF2F4;
+    }
+
+    .page-body-hero-button {
+        width: 90%;
+        font-size: 1rem;
+        margin-top: 16px;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .page-body-hero-image {
+        width: 50%;
+        margin: 6% auto 0;
+    }
+
+    .page-body-classes-cards {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .page-body-classes-playstation,
+    .page-body-classes-xbox,
+    .page-body-classes-nintendo,
+    .page-body-classes-retro {
+        width: 100%;
+    }
+
+    .page-body-classes-title,
+    .page-body-destaques-title,
+    .page-body-catalogo-title {
+        font-size: 1.8rem;
+    }
+
+    .page-body-destaques-container {
+        padding: 16px 10px;
+    }
+
+    .destaques-arrow {
+        font-size: 2.2rem;
+    }
+
+    .banner-button {
+        font-size: 3.2vw;
+        padding: 2vw 5vw;
+        left: 5%;
+        bottom: 10%;
+    }
+
+    .page-body-catalogo-container {
+        padding: 16px;
+    }
+
+    .page-body-catalogo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 16px;
+    }
+}

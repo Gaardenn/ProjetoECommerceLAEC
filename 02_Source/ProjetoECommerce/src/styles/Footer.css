@@ -123,3 +123,25 @@
     gap: 0.475rem;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    .footer-body-info {
+        flex-direction: column;
+        margin: 8% 6%;
+        gap: 2rem;
+    }
+
+    .footer-body-info-column-header {
+        font-size: 1.25rem;
+    }
+
+    .footer-end-content {
+        width: 90%;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .footer-end-content-name {
+        font-size: 1.5rem;
+    }
+}

@@ -90,3 +90,22 @@
     color: #000;
     margin-top: 2px;
 }
+
+@media (max-width: 480px) {
+    .game-card {
+        width: 150px;
+        min-width: 150px;
+    }
+
+    .game-card-image-container {
+        height: 150px;
+    }
+
+    .game-card-title {
+        font-size: 0.8rem;
+    }
+
+    .game-card-final-price {
+        font-size: 1.1rem;
+    }
+}

@@ -206,3 +206,35 @@ input[type="checkbox"] {
 .item-data-quantity-remove:hover {
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .item {
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1.25rem 1rem 2rem 0.5rem;
+    }
+
+    .item-imagem {
+        max-width: 80px;
+    }
+
+    .item-data-title {
+        font-size: 1.1rem;
+    }
+
+    .item-data-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .item-data-extrainfo {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .item-useful {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
