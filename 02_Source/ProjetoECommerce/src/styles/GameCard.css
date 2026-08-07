@@ -1,0 +1,111 @@
+.game-card {
+    background-color: #EDF2F4;
+    width: 220px;
+    min-width: 220px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.game-card-header {
+    text-align: center;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 4px 0;
+}
+
+.game-card-header.playstation { background-color: #0000FF; }
+.game-card-header.xbox { background-color: #107C0F; }
+.game-card-header.nintendo { background-color: #E60012; }
+.game-card-header.default { background-color: #333; }
+
+.game-card-image-container {
+    width: 100%;
+    height: 250px;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-card-info {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.game-card-platform-badge {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.6rem;
+    width: fit-content;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.game-card-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: #000;
+    flex-grow: 1;
+}
+
+.game-card-pricing {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card-discount-info {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    color: #555;
+}
+
+.game-card-discount-badge {
+    color: #0000FF;
+    font-weight: bold;
+}
+
+.game-card-final-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000;
+    margin-top: 2px;
+}
+
+@media (max-width: 480px) {
+    .game-card {
+        width: 150px;
+        min-width: 150px;
+    }
+
+    .game-card-image-container {
+        height: 150px;
+    }
+
+    .game-card-title {
+        font-size: 0.8rem;
+    }
+
+    .game-card-final-price {
+        font-size: 1.1rem;
+    }
+}
