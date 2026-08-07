@@ -4,9 +4,10 @@ import Navbar from "../components/Navbar";
 import { GameCard } from "../components/GameCard";
 import "../styles/Home.css";
 import { useProducts } from "../hooks/useProducts";
+import { UltimosAcessados } from "../components/UltimosAcessados";
 
-export function Home({quantTotal, cart}) {
-    const products = useProducts();
+export function Home({quantTotal, cart, queue}) {
+    const {products} = useProducts();
 
     return (
         <div className="page">
@@ -48,6 +49,7 @@ export function Home({quantTotal, cart}) {
                         </div>
                     </div>
                 </section>
+
                 <section className="page-body-destaques">
                     <h2 className="page-body-destaques-title">PRODUTOS EM DESTAQUE</h2>
                     <div className="page-body-destaques-container">
@@ -68,6 +70,10 @@ export function Home({quantTotal, cart}) {
                 <section className="page-body-banner">
                     <img src="Banner.png" className="banner-img" />
                 <a href="#catalogo" className="banner-button">VER TITULOS EM PROMOÇÃO</a>
+                </section>
+
+                <section className="page-body-ultimos-acessados">
+                    <UltimosAcessados queue={queue} />
                 </section>
 
                 <section id="catalogo" className="page-body-catalogo">

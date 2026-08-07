@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use, useEffect } from 'react'
 import { ProductDetails } from '../components/ProductDetails';
 import { ProductPrice } from '../components/ProductPrice';
 import '../styles/ProductPage.css';
@@ -7,11 +7,17 @@ import Navbar from "../components/Navbar"
 import { useProducts } from '../hooks/useProducts';
 import { useParams } from 'react-router-dom';
 
-export function ProductPage({adicionarProduto, quantTotal, cart}) {
+export function ProductPage({adicionarProduto, quantTotal, cart, adicionarProdutoFila}) {
     const { id } = useParams();
-    const products = useProducts();
+    const { products } = useProducts();
 
     const produto = products.find((p) => p.id === Number(id));
+
+    useEffect(() => {
+        if (produto) {
+            adicionarProdutoFila(produto);
+        }
+    }, [produto]);
 
     if (products.length === 0) {
         return (

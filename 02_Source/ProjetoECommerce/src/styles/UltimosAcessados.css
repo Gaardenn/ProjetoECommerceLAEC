@@ -1,0 +1,32 @@
+.ultimos-acessados-container {
+    padding: 0% 5% 4% 5%;
+}
+
+.ultimos-acessados-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #EDF2F4;
+    margin-bottom: 1rem;
+}
+
+.ultimos-acessados-grid {
+    background-color: #610404;
+    border-radius: 12px;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+@media (max-width: 768px) {
+    .ultimos-acessados-title {
+        font-size: 1.8rem;
+    }
+
+    .ultimos-acessados-grid {
+        padding: 16px 10px;
+        gap: 16px;
+    }
+}
