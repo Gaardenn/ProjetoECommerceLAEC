@@ -5,9 +5,20 @@ import { GameCard } from "../components/GameCard";
 import "../styles/Home.css";
 import { useProducts } from "../hooks/useProducts";
 import { UltimosAcessados } from "../components/UltimosAcessados";
+import { useRef } from "react";
 
 export function Home({quantTotal, cart, queue}) {
     const {products} = useProducts();
+    const carrosselRef = useRef(null);
+
+    function rolarCarrossel(direcao) {
+        if (!carrosselRef.current) return;
+        const largura = carrosselRef.current.clientWidth;
+        carrosselRef.current.scrollBy({
+            left: direcao === "esquerda" ? -largura * 0.8 : largura * 0.8,
+            behavior: "smooth"
+        });
+    }
 
     return (
         <div className="page">
@@ -53,18 +64,15 @@ export function Home({quantTotal, cart, queue}) {
                 <section className="page-body-destaques">
                     <h2 className="page-body-destaques-title">PRODUTOS EM DESTAQUE</h2>
                     <div className="page-body-destaques-container">
-                        <button className="destaques-arrow left">‹</button>
+                        <button className="destaques-arrow left" onClick={() => rolarCarrossel("esquerda")}>‹</button>
                         
-                        <div className="page-body-destaques-carrossel">
+                        <div className="page-body-destaques-carrossel" ref={carrosselRef}>
                             {products.map((p) => (
-                                <GameCard 
-                                    key={p.id} 
-                                    jogo={p} 
-                                />
+                                <GameCard key={p.id} jogo={p} />
                             ))}
                         </div>
 
-                        <button className="destaques-arrow right">›</button>
+                        <button className="destaques-arrow right" onClick={() => rolarCarrossel("direita")}>›</button>
                     </div>
                 </section>
                 <section className="page-body-banner">
