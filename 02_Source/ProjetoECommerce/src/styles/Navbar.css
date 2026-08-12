@@ -61,6 +61,13 @@
     gap: 20px;
 }
 
+.navbar-search-wrapper {
+    position: relative;
+    flex: 1;
+    margin: 0 4rem;
+    max-width: 700px;
+}
+
 .navbar-search {
     display: flex;
     align-items: center;
@@ -68,9 +75,7 @@
     border-radius: 20px;
     padding: 5px 10px;
     width: 100%;
-    max-width: 700px;
     min-width: 150px;
-    margin: 0 64px;
 }
 
 .navbar-search-icon {
@@ -95,6 +100,110 @@
 .navbar-search-input::placeholder {
     color: #804343;
     opacity: 1;
+}
+
+.navbar-search-clear {
+    background: transparent;
+    border: none;
+    color: #5c0808;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    opacity: 0.7;
+}
+
+.navbar-search-clear:hover {
+    opacity: 1;
+}
+
+.navbar-search-drawer {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1001;
+    animation: navbar-search-drawer-down 0.18s ease-out;
+
+    scrollbar-width: thin;
+    scrollbar-color: #5C0808 #EDF2F4;
+}
+
+.navbar-search-drawer::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.navbar-search-drawer::-webkit-scrollbar-track {
+    background: #EDF2F4;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.navbar-search-drawer::-webkit-scrollbar-thumb {
+    background-color: #5C0808;
+    border-radius: 0.875;
+    border: 2px solid #EDF2F4;
+}
+
+.navbar-search-drawer::-webkit-scrollbar-thumb:hover {
+    background-color: #FF3C38;
+}
+
+@keyframes navbar-search-drawer-down {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.navbar-search-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.875rem;
+    cursor: pointer;
+    transitioN: background 0.15s;
+}
+
+.navbar-search-item:hover {
+    background: #F3F3F3;
+}
+
+.navbar-search-item-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    flex-shrink: 0;
+}
+
+.navbar-search-item-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.navbar-search-item-nome {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1C0000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.navbar-search-item-plataforma {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: left;
+}
+
+.navbar-search-empty {
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+    text-align: center;
 }
 
 .navbar-cart {
@@ -177,11 +286,27 @@
         font-size: 11px;
     }
 
-    .navbar-search {
+    .navbar-search-wrapper {
         order: 3;
         width: 100%;
         margin: 0;
         max-width: none;
+        flex: none;
+        min-width: 0;
+    }
+
+    .navbar-search {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .navbar-search-input {
+        min-width: 0;
+    }
+
+    .navbar-search-drawer {
+        max-height: none;
+        overflow-y: visible;
     }
 
     .navbar-actions {

@@ -3,12 +3,10 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { GameCard } from "../components/GameCard";
 import "../styles/Home.css";
-import { useProducts } from "../hooks/useProducts";
 import { UltimosAcessados } from "../components/UltimosAcessados";
 import { useRef } from "react";
 
-export function Home({quantTotal, cart, queue}) {
-    const {products} = useProducts();
+export function Home({quantTotal, cart, queue, products}) {
     const carrosselRef = useRef(null);
 
     function rolarCarrossel(direcao) {
