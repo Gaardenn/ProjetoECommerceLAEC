@@ -1,0 +1,160 @@
+.category-banner {
+    display: flex;
+    align-items: center;
+    padding: 4% 6%;
+    min-height: 280px;
+}
+
+.category-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.category-banner-logo {
+    width: 160px;
+    height: auto;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.35));
+}
+
+.category-banner-title {
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 100%;
+    color: #EDF2F4;
+    margin: 0;
+}
+
+.category-banner-subtitle {
+    font-size: 1.25rem;
+    color: #EDF2F4;
+    opacity: 0.85;
+    margin-top: 0.5rem;
+}
+
+.category-banner-playstation {
+    background-image: linear-gradient(to right, #00007D, #0000FF, #00AAFA);
+}
+
+.category-banner-xbox {
+    background-image: linear-gradient(to right, #003D00, #107C0F, #02C400);
+}
+
+.category-banner-nintendo {
+    background-image: linear-gradient(to right, #7F0002, #E60012, #FF2E31);
+}
+
+.category-banner-retro {
+    background-image: linear-gradient(to right, #924400, #FF7700, #FF851B);
+}
+
+.category-banner-playstation .category-banner-logo {
+    filter: sepia(100%) hue-rotate(190deg) saturate(1000%) drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+}
+
+.category-banner-xbox .category-banner-logo {
+    filter: sepia(100%) hue-rotate(80deg) saturate(1000%) drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+}
+
+.category-banner-nintendo .category-banner-logo {
+    filter: sepia(100%) hue-rotate(300deg) saturate(500%) drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+}
+
+.category-banner-retro .category-banner-logo {
+    filter: sepia(100%) hue-rotate(330deg) saturate(500%) drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+}
+
+.category-catalogo {
+    background-color: #1C0000;
+    padding: 4% 5% 6% 5%;
+}
+
+.category-catalogo-container {
+    background-color: #610404;
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+}
+
+.category-catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.875rem;
+    justify-items: center;
+}
+
+.category-empty {
+    padding: 3.75rem 1.25rem;
+    text-align: center;
+    color: #EDF2F4;
+}
+
+.category-empty p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+}
+
+.category-empty-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 1.875rem;
+    color: #EDF2F4;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.category-empty-button:hover {
+    transform: translateY(-3px);
+}
+
+.category-empty-button-playstation { background-color: #0000FF; }
+.category-empty-button-xbox { background-color: #107C0f; }
+.category-empty-button-nintendo { background-color: #E60012; }
+.category-empty-button-retro { background-color: #FF7700; }
+
+.category-not-found {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #1C0000;
+    color: #EDF2F4;
+    padding-top: 5rem;
+}
+
+.category-not-found a {
+    color: #FF3C38;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .category-banner {
+        padding: 6.25rem 6% 6% 6%;
+        min-height: auto;
+    }
+
+    .category-banner-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .category-banner-logo {
+        width: 110px;
+    }
+
+    .category-banner-title {
+        font-size: 2.25rem;
+    }
+
+    .category-banner-subtitle {
+        font-size: 1rem;
+    }
+
+    .category-catalogo-container {
+        padding: 1.25rem;
+    }
+}

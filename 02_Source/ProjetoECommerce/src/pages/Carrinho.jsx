@@ -16,60 +16,6 @@ export function Carrinho({cart, adicionarUnidade, removerUnidade, removerItem, m
     const [descontoTotal, setDescontoTotal] = useState(() => calcularDescontoTotal());
     const [frete, setFrete] = useState(() => calcularFreteTotal());
 
-    const gow = {
-        id: 1,
-        nome: "God of War Ragnarök",
-        plataforma: "Playstation 4",
-        dev: "Santa Monica Studios",
-        pub: "Sony Interactive Entertrainment",
-        status: "Em estoque",
-        midia: "Física",
-        presente: false,
-        quantidade: 1,
-        marcado: false,
-        preco: 187.87,
-        desconto: 0,
-        imagem: "Jogo 1.png",
-        peso: 0.05,
-        volume: 1
-    }
-
-    const h3 = {
-        id: 2,
-        nome: "Halo 3",
-        plataforma: "Xbox 360",
-        dev: "Bungie Studios",
-        pub: "Microsoft Game Studios",
-        status: "Em estoque",
-        midia: "Física",
-        presente: false,
-        quantidade: 0,
-        marcado: false,
-        preco: 49.99,
-        desconto: 20,
-        imagem: "Halo 3.png",
-        peso: 0.06,
-        volume: 1
-    }
-
-    const smo = {
-        id: 3,
-        nome: "Super Mario Odyssey",
-        plataforma: "Nintendo Switch",
-        dev: "Nintendo Entertrainment Planning & Development",
-        pub: "Nintendo",
-        status: "Em estoque",
-        midia: "Digital",
-        presente: true,
-        quantidade: 1,
-        marcado: true,
-        preco: 349.99,
-        desconto: 0,
-        imagem: "Super Mario Odyssey.png",
-        peso: 0,
-        volume: 0
-    }
-
     useEffect(() => {
     }, []);
 
