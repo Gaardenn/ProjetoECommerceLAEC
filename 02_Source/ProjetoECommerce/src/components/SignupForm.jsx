@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/Autenticacao.css";
+import { useToast } from '../context/ToastContext';
 
 function SignupForm({ onToggle }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [erro, setErro] = useState("");
+    const { showToast } = useToast();
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -39,7 +42,8 @@ function SignupForm({ onToggle }) {
         setErro("");
         localStorage.setItem("email", email);
         localStorage.setItem("password", password);
-        alert("Conta criada com sucesso!");
+        showToast("Conta criada com sucesso!", "sucesso");
+        navigate("/");
     }
 
     return (
