@@ -24,6 +24,7 @@
 .game-card-header.playstation { background-color: #0000FF; }
 .game-card-header.xbox { background-color: #107C0F; }
 .game-card-header.nintendo { background-color: #E60012; }
+.game-card-header.retro { background-color: #FF7700; }
 .game-card-header.default { background-color: #333; }
 
 .game-card-image-container {

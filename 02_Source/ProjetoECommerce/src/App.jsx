@@ -9,6 +9,7 @@ import { useCart } from './hooks/useCart';
 import { useUltimosAcessados } from './hooks/useUltimosAcessados';
 import { useProducts } from './hooks/useProducts';
 import { CategoryPage } from './pages/CategoryPage';
+import { ScrollToTop } from './components/ScrollToTop';
 
 export function App() {
   const { products } = useProducts();
@@ -18,6 +19,7 @@ export function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home quantTotal={quantTotal} cart={cart} queue={queue} products={products}/>} />
         <Route path="/produto/:id" element={<ProductPage adicionarProduto={adicionarProduto} quantTotal={quantTotal} cart={cart} adicionarProdutoFila={adicionarProdutoFila}/>} />

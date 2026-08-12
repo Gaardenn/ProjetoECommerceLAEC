@@ -4,11 +4,13 @@ import "../styles/GameCard.css";
 export function GameCard({ jogo = {} }) {
     const precoFinal = (jogo.preco || 0) - ((jogo.preco || 0) * ((jogo.desconto || 0) / 100));
 
+    const imagemSrc = jogo.imagem?.startsWith("/") ? jogo.imagem : `/${jogo.imagem || ""}`;
     let plataformaClass = "default";
     const plataformaLower = (jogo.plataforma || "").toLowerCase();
     if (plataformaLower.includes("playstation")) plataformaClass = "playstation";
     if (plataformaLower.includes("xbox")) plataformaClass = "xbox";
     if (plataformaLower.includes("nintendo")) plataformaClass = "nintendo";
+    if (plataformaLower.includes("mega drive")) plataformaClass = "retro";
 
     return (
         <div className="game-card">
@@ -17,7 +19,7 @@ export function GameCard({ jogo = {} }) {
                     {jogo.plataforma}
                 </div>
                 <div className="game-card-image-container">
-                    <img src={jogo.imagem} alt={jogo.nome} className="game-card-image" />
+                    <img src={imagemSrc} alt={jogo.nome} className="game-card-image" />
                 </div>
                 <div className="game-card-info">
                     <div className="game-card-platform-badge">{(jogo.tags && jogo.tags[0]) || jogo.plataforma}</div>
