@@ -7,6 +7,7 @@ import { useCart } from '../hooks/useCart';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import { formatarPreco } from '../utils/formatarPreco';
 
 export function Carrinho({cart, adicionarUnidade, removerUnidade, removerItem, marcar, todosMarcados, marcarTudo, presentear, quantMarcados, quantTotal, calcularSubtotal, calcularDescontoTotal, calcularFreteTotal}) {
     
@@ -66,28 +67,28 @@ export function Carrinho({cart, adicionarUnidade, removerUnidade, removerItem, m
                                 <p className="body-content-total-subtotal-text">Subtotal</p>
                                 <p className="body-content-total-subtotal-currency">
                                     R$
-                                    <span className="body-content-total-subtotal-price">{subtotal.toFixed(2)}</span>
+                                    <span className="body-content-total-subtotal-price">{formatarPreco(subtotal)}</span>
                                 </p>
                             </div>
                             <div className="body-content-total-shipping">
                                 <p className="body-content-total-shipping-text">Frete</p>
                                 <p className="body-content-total-shipping-currency">
                                     R$
-                                    <span className="body-content-total-shipping-price">{frete.toFixed(2)}</span>
+                                    <span className="body-content-total-shipping-price">{formatarPreco(frete)}</span>
                                 </p>
                             </div>
                             <div className="body-content-total-discount">
                                 <p className="body-content-total-discount-text">Desconto</p>
                                 <p className="body-content-total-discount-currency">
                                     R$
-                                    <span className="body-content-total-discount-price">{descontoTotal.toFixed(2)}</span>
+                                    <span className="body-content-total-discount-price">{formatarPreco(descontoTotal)}</span>
                                 </p>
                             </div>
                             <div className="body-content-total-value">
                                 <h2 className="body-content-total-value-text">TOTAL</h2>
                                 <p className="body-content-total-value-currency">
                                     R$
-                                    <span className="body-content-total-value-price">{subtotal + frete - descontoTotal < 0 ? (0).toFixed(2) : (subtotal + frete - descontoTotal).toFixed(2)}</span>
+                                    <span className="body-content-total-value-price">{formatarPreco(Math.max(0, subtotal + frete - descontoTotal))}</span>
                                 </p>
                             </div>
                             <Link to="/Autenticacao" className="body-content-total-button">Comprar</Link>
