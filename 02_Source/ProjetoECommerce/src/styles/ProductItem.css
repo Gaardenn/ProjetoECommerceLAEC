@@ -251,3 +251,13 @@ input[type="checkbox"] {
         align-items: center;
     }
 }
+
+@media (max-width: 480px) {
+    .item-imagem {
+        max-width: 70px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 0.25rem;
+        flex-shrink: 0;
+    }
+}
