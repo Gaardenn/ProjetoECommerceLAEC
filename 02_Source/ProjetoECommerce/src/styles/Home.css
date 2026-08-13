@@ -268,10 +268,11 @@
     display: flex;
     gap: 20px;
     overflow-x: auto;
-    padding: 10px;
+    padding: 10px 0.25rem;
     scrollbar-width: none;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    scroll-padding: 0 0.675rem;
 }
 
 .page-body-destaques-carrossel::-webkit-scrollbar {
