@@ -358,6 +358,18 @@
         font-size: 2rem;
     }
 
+    .body-content-sidebar {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .body-content-total {
+        min-height: 510px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .body-content-total-value-text {
         font-size: 1.5rem;
     }
