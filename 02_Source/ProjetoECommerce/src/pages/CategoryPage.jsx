@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import { GameCard } from "../components/GameCard";
 import { useProducts } from "../hooks/useProducts";
 import "../styles/CategoryPage.css";
+import { Loader } from "../components/Loader";
+import { ErrorState } from "../components/ErrorState";
 
 const CATEGORIAS = {
     playstation: {
@@ -38,8 +40,28 @@ const CATEGORIAS = {
 
 export function CategoryPage({ quantTotal, cart }) {
     const { slug } = useParams();
-    const { products } = useProducts();
+    const { products, loading, error, retry } = useProducts();
     const categoria = CATEGORIAS[slug];
+
+    if (loading) {
+        return (
+            <div className="page">
+                <Navbar quantTotal={quantTotal} cart={cart} />
+                <Loader mensagem="Carregando categoria..." />
+                <Footer />
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="page">
+                <Navbar quantTotal={quantTotal} cart={cart} />
+                <ErrorState mensagem={error} onRetry={retry} />
+                <Footer />
+            </div>
+        );
+    }
 
     if (!categoria) {
         return (

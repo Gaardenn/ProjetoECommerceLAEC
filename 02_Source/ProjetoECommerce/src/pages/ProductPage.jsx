@@ -6,10 +6,12 @@ import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import { useProducts } from '../hooks/useProducts';
 import { useParams } from 'react-router-dom';
+import { Loader } from '../components/Loader';
+import { ErrorState } from '../components/ErrorState';
 
 export function ProductPage({adicionarProduto, quantTotal, cart, adicionarProdutoFila}) {
     const { id } = useParams();
-    const { products } = useProducts();
+    const { products, loading, error, retry } = useProducts();
 
     const produto = products.find((p) => p.id === Number(id));
 
@@ -21,13 +23,31 @@ export function ProductPage({adicionarProduto, quantTotal, cart, adicionarProdut
 
     if (products.length === 0) {
         return (
-            <p>Carregando...</p>
-        )
+            <>
+                <Navbar quantTotal={quantTotal} cart={cart} />
+                <Loader mensagem="Carregando produto..." />
+                <Footer />
+            </>
+        );
+    }
+
+    if (error) {
+        return (
+            <>
+                <Navbar quantTotal={quantTotal} cart={cart} />
+                <ErrorState mensagem={error} onRetry={retry} />
+                <Footer />
+            </>
+        );
     }
 
     if (!produto) {
         return (
-            <p>Produto não encontrado.</p>
+            <>
+                <Navbar quantTotal={quantTotal} cart={cart} />
+                <ErrorState mensagem="Produto não encontrado." />
+                <Footer />
+            </>
         )
     }
 
