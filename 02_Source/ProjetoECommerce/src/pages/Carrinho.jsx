@@ -57,7 +57,7 @@ export function Carrinho({cart, adicionarUnidade, removerUnidade, removerItem, m
                             </label>
                         </div>
                     </div>
-                    <div>
+                    <div className="body-content-sidebar">
                         <div className="body-content-total">
                             {quant > 1 ?
                                 <p className="body-content-total-quantity">({quant} produtos)</p> :
