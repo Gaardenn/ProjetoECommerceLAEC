@@ -470,10 +470,11 @@
     }
 
     .banner-button {
-        font-size: 3.2vw;
-        padding: 2vw 5vw;
+        font-size: 1.1rem;
+        padding: 0.875rem 1.25rem;
         left: 5%;
-        bottom: 10%;
+        bottom: 12%;
+        border-radius: 1.5rem;
     }
 
     .page-body-catalogo-container {
