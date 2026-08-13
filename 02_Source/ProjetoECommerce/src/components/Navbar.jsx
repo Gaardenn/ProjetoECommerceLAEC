@@ -66,7 +66,7 @@ export default function Navbar({ quantTotal, cart }) {
                                     className="navbar-search-item"
                                     onClick={() => irParaProduto(p.id)}
                                 >
-                                    <img src={p.imagem} alt={p.nome} className="navbar-search-item-img" />
+                                    <img src={`/${p.imagem}`} alt={p.nome} className="navbar-search-item-img" />
                                     <div className="navbar-search-item-info">
                                         <span className="navbar-search-item-nome">{p.nome}</span>
                                         <span className="navbar-search-item-plataforma">{p.plataforma}</span>

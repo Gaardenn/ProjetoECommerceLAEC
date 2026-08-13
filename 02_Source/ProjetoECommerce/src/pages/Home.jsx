@@ -34,32 +34,32 @@ export function Home({ quantTotal, cart, queue, products, loading, error, retry 
                             <h1 className="page-body-hero-title">Mídias físicas e digitais de jogos novos e usados a <span className="page-body-hero-title-alt">um clique</span> de distância</h1>
                             <a href="#catalogo" className="page-body-hero-button">Confira nosso catálogo</a>
                         </div>
-                        <img src="CD.png" className="page-body-hero-image" />
+                        <img src="CD.webp" className="page-body-hero-image" />
                     </section>
                     <section className="page-body-classes">
                         <h2 className="page-body-classes-title">CATEGORIAS</h2>
                         <div className="page-body-classes-cards">
                             <div className="page-body-classes-playstation">
                                 <Link to="/categoria/playstation" className="page-body-classes-playstation-gradient">
-                                    <img src="Img-Sony-PlayStation-PNG-Image 1.png" alt="" className="page-body-classes-playstation-gradient-img" />
+                                    <img src="Img-Sony-PlayStation-PNG-Image 1.webp" alt="" className="page-body-classes-playstation-gradient-img" />
                                     <h3 className="page-body-classes-playstation-gradient-title">PlayStation</h3>
                                 </Link>
                             </div>
                             <div className="page-body-classes-xbox">
                                 <Link to="/categoria/xbox" className="page-body-classes-xbox-gradient">
-                                    <img src="Img-Xbox.png" alt="" className="page-body-classes-xbox-gradient-img" />
+                                    <img src="Img-Xbox.webp" alt="" className="page-body-classes-xbox-gradient-img" />
                                     <h3 className="page-body-classes-xbox-gradient-title">Xbox</h3>
                                 </Link>
                             </div>
                             <div className="page-body-classes-nintendo">
                                 <Link to="/categoria/nintendo" className="page-body-classes-nintendo-gradient">
-                                    <img src="5bbc07b9af4bb-5135506e4e5927d3c9fc6b95a3322b97 1.png" alt="" className="page-body-classes-nintendo-gradient-img" />
+                                    <img src="5bbc07b9af4bb-5135506e4e5927d3c9fc6b95a3322b97 1.webp" alt="" className="page-body-classes-nintendo-gradient-img" />
                                     <h3 className="page-body-classes-nintendo-gradient-title">Nintendo</h3>
                                 </Link>
                             </div>
                             <div className="page-body-classes-retro">
                                 <Link to="/categoria/retro" className="page-body-classes-retro-gradient">
-                                    <img src="563-5632966_sega-konsolen-liste-sega-mega-drive-classic-hd-Photoroom 1.png" alt="" className="page-body-classes-retro-gradient-img" />
+                                    <img src="563-5632966_sega-konsolen-liste-sega-mega-drive-classic-hd-Photoroom 1.webp" alt="" className="page-body-classes-retro-gradient-img" />
                                     <h3 className="page-body-classes-retro-gradient-title">Retro</h3>
                                 </Link>
                             </div>
@@ -81,7 +81,7 @@ export function Home({ quantTotal, cart, queue, products, loading, error, retry 
                         </div>
                     </section>
                     <section className="page-body-banner">
-                        <img src="Banner.png" className="banner-img" />
+                        <img src="Banner.webp" className="banner-img" />
                         <a href="#catalogo" className="banner-button">VER TITULOS EM PROMOÇÃO</a>
                     </section>
 

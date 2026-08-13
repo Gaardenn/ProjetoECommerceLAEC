@@ -19,7 +19,7 @@ export function GameCard({ jogo = {} }) {
                     {jogo.plataforma}
                 </div>
                 <div className="game-card-image-container">
-                    <img src={imagemSrc} alt={jogo.nome} className="game-card-image" />
+                    <img src={imagemSrc} alt={jogo.nome} className="game-card-image" loading="lazy" />
                 </div>
                 <div className="game-card-info">
                     <div className="game-card-platform-badge">{(jogo.tags && jogo.tags[0]) || jogo.plataforma}</div>

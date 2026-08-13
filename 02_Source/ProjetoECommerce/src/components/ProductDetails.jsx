@@ -16,10 +16,10 @@ export function ProductDetails({produto}) {
                     <button type="button" className="nav-arrow" aria-label="Imagem anterior">
                         <FontAwesomeIcon icon={faChevronLeft} />
                     </button>
-                    <img src="/Jogo 1.png" alt="Miniatura 1" className="thumb thumb-active" />
-                    <img src="/Jogo 2.png" alt="Miniatura 2" className="thumb thumb-muted" />
-                    <img src="/Jogo 3.png" alt="Miniatura 3" className="thumb thumb-muted" />
-                    <img src="/Jogo 4.png" alt="Miniatura 4" className="thumb thumb-muted" />
+                    <img src={`/${produto.imagem}`} alt="Miniatura 1" className="thumb thumb-active" />
+                    <img src="/Jogo 2.webp" alt="Miniatura 2" className="thumb thumb-muted" />
+                    <img src="/Jogo 3.webp" alt="Miniatura 3" className="thumb thumb-muted" />
+                    <img src="/Jogo 4.webp" alt="Miniatura 4" className="thumb thumb-muted" />
 
                     <div className="thumb more-photos-circle">+5</div>
                     <button type="button" className="nav-arrow" aria-label="Próxima imagem">
