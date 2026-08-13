@@ -41,7 +41,7 @@ export default function Navbar({ quantTotal, cart }) {
             </Link>
 
             <div className="navbar-search-wrapper">
-                <div className="navbar-search">
+                <div className={`navbar-search ${termoLimpo !== "" ? "navbar-search-active" : ""}`}>
                     <span className="navbar-search-icon"><FontAwesomeIcon icon={faMagnifyingGlass} /></span>
                     <input
                         type="text"
@@ -58,7 +58,7 @@ export default function Navbar({ quantTotal, cart }) {
                 </div>
 
                 {termoLimpo !== "" && (
-                    <div className="navbar-search-drawer">
+                    <div className="navbar-search">
                         {resultados.length > 0 ? (
                             resultados.map((p) => (
                                 <div
