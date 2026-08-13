@@ -174,7 +174,7 @@
     font-weight: 700;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
 
     .product-details-container {
         flex-direction: column;
@@ -193,12 +193,13 @@
     }
 
     .nav-arrow {
-        flex: 0 0 24px;
+        flex: 0 0 32px;
+        font-size: 1.6rem;
     }
 
     .thumb {
-        width: 40px;
-        height: 44px;
+        width: 60px;
+        height: 68px;
     }
 
     .more-photos-circle {

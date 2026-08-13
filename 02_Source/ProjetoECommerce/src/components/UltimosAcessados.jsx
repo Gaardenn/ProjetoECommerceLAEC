@@ -17,7 +17,7 @@ export function UltimosAcessados({ queue = [] }) {
 
     return (
         <div className="ultimos-acessados-container">
-            <h2 className="ultimos-acessados-title">Últimos Acessados</h2>
+            <h2 className="ultimos-acessados-title">ÚLTIMOS ACESSADOS</h2>
             <div className="ultimos-acessados-grid">
                 {produtos.map((produto) => (
                     <GameCard key={produto.id} jogo={produto} />

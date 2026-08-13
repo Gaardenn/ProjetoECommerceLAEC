@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-import LoginForm from "../components/LoginForm";
-import SignupForm from "../components/SignupForm";
+import AuthForm from "../components/AuthForm";
 import { Link } from "react-router-dom";
 import "../styles/Autenticacao.css";
 
 export function Autenticacao() {
-    const [isLogin, setIsLogin] = useState(true);
-
     return (
         <div className="auth-page">
             <div className='auth-header'>
@@ -19,11 +15,7 @@ export function Autenticacao() {
                 </Link>
             </div>
 
-            {isLogin ? (
-                <LoginForm onToggle={() => setIsLogin(false)} />
-            ) : (
-                <SignupForm onToggle={() => setIsLogin(true)} />
-            )}
+            <AuthForm />
 
             <section>
                 <section className="footer-divider" />

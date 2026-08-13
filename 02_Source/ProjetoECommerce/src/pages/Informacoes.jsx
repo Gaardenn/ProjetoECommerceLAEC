@@ -6,7 +6,7 @@ export function Informacoes({quantTotal, cart}) {
     return (
         <div>
             <Navbar quantTotal={quantTotal} cart={cart} />
-            <div className="page-body">
+            <div className="info-body">
                 <h1 className="page-body-title">Informações</h1>
                 <h2 className="page-body-subtitle">Troca e Devoluções</h2>
                 <p className="page-body-text">

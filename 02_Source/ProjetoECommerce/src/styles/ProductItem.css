@@ -38,6 +38,7 @@ input[type="checkbox"] {
 
 .item-data {
     flex: 2;
+    min-width: 0;
     text-align: left;
 }
 
@@ -207,6 +208,18 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+    .item {
+        gap: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    .item-imagem {
+        max-width: 90px;
+        flex-shrink: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .item {
         flex-wrap: wrap;
@@ -236,5 +249,15 @@ input[type="checkbox"] {
         width: 100%;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .item-imagem {
+        max-width: 70px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 0.25rem;
+        flex-shrink: 0;
     }
 }

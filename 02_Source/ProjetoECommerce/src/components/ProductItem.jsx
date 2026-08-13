@@ -2,6 +2,7 @@ import "../styles/ProductItem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { formatarPreco } from '../utils/formatarPreco';
 
 export function ProductItem({ produto, adicionarUnidade, removerUnidade, removerItem, marcar, presentear }) {
     const { imagem, nome, plataforma, dev, pub, status, midia, quantidade, marcado, preco, presente } = produto;
@@ -40,7 +41,7 @@ export function ProductItem({ produto, adicionarUnidade, removerUnidade, remover
                     </div>
                 </div>
                 <div className="item-useful">
-                    <p className="item-useful-currency">R$ <span className="item-useful-value">{preco}</span></p>
+                    <p className="item-useful-currency">R$ <span className="item-useful-value">{formatarPreco(preco)}</span></p>
                     <button className="item-useful-button" onClick={() => removerItem(produto)}><FontAwesomeIcon icon={faTrash} /></button>
                 </div>
             </div>

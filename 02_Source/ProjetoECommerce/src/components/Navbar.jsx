@@ -58,7 +58,7 @@ export default function Navbar({ quantTotal, cart }) {
                 </div>
 
                 {termoLimpo !== "" && (
-                    <div className="navbar-search">
+                    <div className="navbar-search-drawer">
                         {resultados.length > 0 ? (
                             resultados.map((p) => (
                                 <div

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { formatarPreco } from '../utils/formatarPreco';
 import '../styles/ProductPrice.css';
 
 export function ProductPrice({produto, adicionarProduto}) {
@@ -11,10 +12,10 @@ export function ProductPrice({produto, adicionarProduto}) {
             <section className="purchase-card">
                 <div className="price-headline">
                     <div className="price-label">R$</div>
-                    <div className="price-value">{preco}</div>
+                    <div className="price-value">{formatarPreco(preco)}</div>
                     <div className="discount-info">à vista</div>
                 </div>
-                <div className="installments-info">ou por R$ {(preco/10).toFixed(2)}/mês <br /> em 12x</div>
+                <div className="installments-info">ou por R$ {formatarPreco(preco/10)}/mês <br /> em 12x</div>
 
                 <div className="delivery-info">
                     <div className="delivery-row">
