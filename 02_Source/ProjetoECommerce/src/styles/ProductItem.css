@@ -208,6 +208,18 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+    .item {
+        gap: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    .item-imagem {
+        max-width: 90px;
+        flex-shrink: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .item {
         flex-wrap: wrap;
