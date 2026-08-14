@@ -58,7 +58,7 @@ function Footer() {
                 <div className="footer-end-content">
                     <div>
                         <Link to="/" className="footer-end-content-link">
-                            <img src="./logofooter.svg" alt="" />
+                            <img src="/logofooter.svg" alt="" />
                             <h1 className="footer-end-content-name">CDist</h1>
                         </Link>
                     </div>
