@@ -91,7 +91,6 @@
     width: 40%;
     display: flex;
     gap: 1.75rem;
-    justify-content: center;
     align-items: center;
     margin-top: 2.29%;
     margin-bottom: 2.29%;
@@ -107,14 +106,14 @@
 .footer-end-content-dot {
     color: #EDF2F4;
     font-size: 1.5rem;
-    margin-top: 3%;
+    margin: 0;
 }
 
 .footer-end-content-copyright {
     color: #EDF2F4;
     font-size: 0.875rem;
     font-weight: 700;
-    margin-top: 3%;
+    margin: 0;
 }
 
 .footer-end-content-link {
@@ -144,4 +143,9 @@
     .footer-end-content-name {
         font-size: 1.5rem;
     }
+}
+
+.footer-end-logo-img {
+    width: 29px;
+    height: auto;
 }

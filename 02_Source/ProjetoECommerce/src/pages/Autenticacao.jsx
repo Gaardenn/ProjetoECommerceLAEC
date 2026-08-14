@@ -7,7 +7,7 @@ export function Autenticacao() {
         <div className="auth-page">
             <div className='auth-header'>
                 <Link to="/" className="auth-brand">
-                    <img src="/Logo2.png" alt="CDist Logo" className="auth-logo-img"/>
+                    <img src="/cdlogo.svg" alt="CDist Logo" className="auth-logo-img"/>
                     <div className="auth-titles">
                         <h2>CDist</h2>
                         <span>Sua locadora digital</span>
@@ -20,7 +20,7 @@ export function Autenticacao() {
             <section>
                 <section className="footer-divider" />
                 <div className="auth-footer-info">
-                    <img src="/logofooter.svg" alt="CDist Logo" className="auth-footer-logo-img"/>
+                    <img src="/cdlogo.svg" alt="CDist Logo" className="auth-footer-logo-img"/>
                     <span className="auth-footer-title">CDist</span>
                     <span className="auth-footer-point">•</span>
                     <span className="auth-footer-text">© 2026. Todos os direitos reservados.</span>

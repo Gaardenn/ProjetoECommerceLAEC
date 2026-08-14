@@ -33,7 +33,7 @@ export default function Navbar({ quantTotal, cart }) {
     return (
         <nav className="navbar">
             <Link to="/" className="navbar-brand">
-                <img src="/logonavbar.svg" alt="CDist Logo" className="navbar-logo-img" />
+                <img src="/cdlogo.svg" alt="CDist Logo" className="navbar-logo-img" />
                 <div className="navbar-titles">
                     <h1 className="navbar-name">CDist</h1>
                     <span className="navbar-slogan">Sua locadora digital</span>
